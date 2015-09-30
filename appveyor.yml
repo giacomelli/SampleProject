@@ -16,7 +16,7 @@ build:
   verbosity: minimal
 
 test_script:
-- cmd: >-
+- ps: >-
     .\src\packages\OpenCover.4.6.166\tools\OpenCover.Console.exe -register:user  -output:opencoverCoverage.xml -target:"vstest.console.exe" -targetargs:"/logger:Appveyor \"%cd%\src\ProjectSample.Infrastructure.Framework.UnitTests\bin\Debug\ProjectSample.Infrastructure.Framework.UnitTests.dll\" \"%cd%\src\ProjectSample.Domain.UnitTests\bin\Debug\ProjectSample.Domain.UnitTests.dll\"" -targetdir:"%cd%\src\ProjectSample.Domain.UnitTests\bin\Debug" -filter:"+[*]ProjectSample.* -[*.UnitTests]*"
 
     .\src\packages\coveralls.net.0.6.0\tools\csmacnz.Coveralls.exe --opencover -i opencoverCoverage.xml --repoToken $env:COVERALLS_REPO_TOKEN --commitId $env:APPVEYOR_REPO_COMMIT --commitBranch $env:APPVEYOR_REPO_BRANCH --commitAuthor $env:APPVEYOR_REPO_COMMIT_AUTHOR --commitEmail $env:APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL --commitMessage $env:APPVEYOR_REPO_COMMIT_MESSAGE --jobId $env:APPVEYOR_JOB_ID
