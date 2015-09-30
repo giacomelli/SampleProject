@@ -1,0 +1,819 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="10.0" Name="ProjectSample">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">$(FxCopDir)\Xml\FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded" NewOnly="False" />
+   <Report Status="Active" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="en-US" />
+  <OverrideRuleVisibilities>True</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+  <IgnoreGeneratedCode>True</IgnoreGeneratedCode>
+ </ProjectOptions>
+ <Targets>
+  <AssemblyReferenceDirectories>
+   <Directory>$(ProjectDir)/ProjectSample.WebApp/bin/</Directory>
+   <Directory>$(ProjectDir)/ProjectSample.WebApp/bin/</Directory>
+   <Directory>$(ProjectDir)/ProjectSample.WebApi/bin/</Directory>
+   <Directory>$(ProjectDir)/ProjectSample.WebApi/bin/</Directory>
+  </AssemblyReferenceDirectories>
+  <Target Name="$(ProjectDir)/ProjectSample.BackgroundWorkerApp/bin/DEV/ProjectSample.BackgroundWorkerApp.exe" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/ProjectSample.Domain/bin/DEV/ProjectSample.Domain.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/ProjectSample.Infrastructure.Framework/bin/DEV/ProjectSample.Infrastructure.Framework.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/ProjectSample.Infrastructure.Repositories/bin/DEV/ProjectSample.Infrastructure.Repositories.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/ProjectSample.Infrastructure.Web/bin/DEV/ProjectSample.Infrastructure.Web.dll" Analyze="True" AnalyzeAllChildren="True" />
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityTransparencyRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="10.0">
+  <Namespaces>
+   <Namespace Name="ProjectSample.Domain.Accounts.Specs">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2015-09-30 17:27:43Z">
+      <Issue>
+       <Item>ProjectSample.Domain.Accounts.Specs</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="ProjectSample.Infrastructure.Framework.Commons">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2015-09-30 17:27:43Z">
+      <Issue>
+       <Item>ProjectSample.Infrastructure.Framework.Commons</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="ProjectSample.Infrastructure.Framework.Commons.Specs">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2015-09-30 17:27:43Z">
+      <Issue>
+       <Item>ProjectSample.Infrastructure.Framework.Commons.Specs</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="ProjectSample.Infrastructure.Framework.Linq">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2015-09-30 17:27:43Z">
+      <Issue>
+       <Item>ProjectSample.Infrastructure.Framework.Linq</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+  </Namespaces>
+  <Targets>
+   <Target Name="$(ProjectDir)/ProjectSample.BackgroundWorkerApp/bin/DEV/ProjectSample.BackgroundWorkerApp.exe">
+    <Modules>
+     <Module Name="projectsample.backgroundworkerapp.exe">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2015-09-30 17:27:43Z">
+        <Issue Name="NoStrongName">
+         <Item>'ProjectSample.BackgroundWorkerApp.exe'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="ProjectSample.BackgroundWorkerApp">
+        <Types>
+         <Type Name="Program">
+          <Members>
+           <Member Name="#Main(System.String[])">
+            <Messages>
+             <Message Id="args" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2015-09-30 17:27:43Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'args'</Item>
+               <Item>'Program.Main(string[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/ProjectSample.Domain/bin/DEV/ProjectSample.Domain.dll">
+    <Modules>
+     <Module Name="projectsample.domain.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2015-09-30 17:27:43Z">
+        <Issue Name="NoStrongName">
+         <Item>'ProjectSample.Domain.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2015-09-30 17:27:43Z">
+        <Issue>
+         <Item>'ProjectSample.Domain.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="ProjectSample.Domain.Accounts">
+        <Types>
+         <Type Name="IPermissionService">
+          <Messages>
+           <Message TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040" Created="2015-09-30 17:27:43Z">
+            <Issue>
+             <Item>'IPermissionService'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="IUserPasswordService">
+          <Members>
+           <Member Name="#GetPasswordResetTokensNotSent()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2015-09-30 17:27:43Z">
+              <Issue Certainty="50">
+               <Item>'IUserPasswordService.GetPasswordResetTokensNotSent()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetPasswordResetTokensUsedNotNotified()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2015-09-30 17:27:43Z">
+              <Issue Certainty="50">
+               <Item>'IUserPasswordService.GetPasswordResetTokensUsedNotNotified()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#MarkPasswordResetTokenAsSent(System.Int32)">
+            <Messages>
+             <Message Id="AsSent" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2015-09-30 17:27:43Z">
+              <Issue Name="MemberShouldBeDiscreteTerm">
+               <Item>AsSent</Item>
+               <Item>'IUserPasswordService.MarkPasswordResetTokenAsSent(int)'</Item>
+               <Item>Assent</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IUserService">
+          <Members>
+           <Member Name="#Count(System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;ProjectSample.Domain.Accounts.User,System.Boolean&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'IUserService.Count(Expression&lt;Func&lt;User, bool&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;User, bool&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Permission">
+          <Messages>
+           <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Created="2015-09-30 17:27:43Z">
+            <Issue Name="TypeNoAlternate">
+             <Item>'Permission'</Item>
+             <Item>Permission</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="Role">
+          <Members>
+           <Member Name="#.ctor()">
+            <Messages>
+             <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'Role.Role()'</Item>
+               <Item>&#xD;&#xA;&#xD;&#xA;Role..ctor()&#xD;&#xA;Role.set_Permissions(IList&lt;Permission&gt;):Void</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Permissions">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'Role.Permissions'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="RoleFilter">
+          <Members>
+           <Member Name="#Sanitize()">
+            <Messages>
+             <Message TypeName="NormalizeStringsToUppercase" Category="Microsoft.Globalization" CheckId="CA1308" Created="2015-09-30 17:27:43Z">
+              <Issue Name="ToUpperInvariant">
+               <Item>'RoleFilter.Sanitize()'</Item>
+               <Item>'string.ToLowerInvariant()'</Item>
+              </Issue>
+              <Issue Name="ToUpperInvariant">
+               <Item>'RoleFilter.Sanitize()'</Item>
+               <Item>'string.ToLowerInvariant()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="User">
+          <Members>
+           <Member Name="#ProjectSample.Infrastructure.Framework.Domain.INamedEntity.Name">
+            <Accessors>
+             <Accessor Name="#ProjectSample.Infrastructure.Framework.Domain.INamedEntity.get_Name()">
+              <Messages>
+               <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2015-09-30 17:27:43Z">
+                <Issue>
+                 <Item>'User'</Item>
+                 <Item>'INamedEntity.Name.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="UserFilter">
+          <Members>
+           <Member Name="#Sanitize(System.String)">
+            <Messages>
+             <Message TypeName="NormalizeStringsToUppercase" Category="Microsoft.Globalization" CheckId="CA1308" Created="2015-09-30 17:27:43Z">
+              <Issue Name="ToUpperInvariant">
+               <Item>'UserFilter.Sanitize(string)'</Item>
+               <Item>'string.ToLower(CultureInfo)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Subregional">
+            <Messages>
+             <Message Id="Subregional" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2015-09-30 17:27:43Z">
+              <Issue Name="Member">
+               <Item>Subregional</Item>
+               <Item>'UserFilter.Subregional'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="UserService">
+          <Members>
+           <Member Name="#BackgroundWokerUserId">
+            <Messages>
+             <Message Id="Woker" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2015-09-30 17:27:43Z">
+              <Issue Name="Member">
+               <Item>Woker</Item>
+               <Item>'UserService.BackgroundWokerUserId'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#BackgroundWokerUserName">
+            <Messages>
+             <Message Id="Woker" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2015-09-30 17:27:43Z">
+              <Issue Name="Member">
+               <Item>Woker</Item>
+               <Item>'UserService.BackgroundWokerUserName'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/ProjectSample.Infrastructure.Framework/bin/DEV/ProjectSample.Infrastructure.Framework.dll">
+    <Modules>
+     <Module Name="projectsample.infrastructure.framework.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2015-09-30 17:27:43Z">
+        <Issue Name="NoStrongName">
+         <Item>'ProjectSample.Infrastructure.Framework.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2015-09-30 17:27:43Z">
+        <Issue>
+         <Item>'ProjectSample.Infrastructure.Framework.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Created="2015-09-30 17:27:43Z">
+        <Issue>
+         <Item>'ProjectSample.Infrastructure.Framework.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="ProjectSample.Infrastructure.Framework.Commons.Specs">
+        <Types>
+         <Type Name="MustHaveUniqueValueSpec`2">
+          <Members>
+           <Member Name="#.ctor(System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!0,!1&gt;&gt;,System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!1,!0&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'MustHaveUniqueValueSpec&lt;TTarget, TValue&gt;.MustHaveUniqueValueSpec(Expression&lt;Func&lt;TTarget, TValue&gt;&gt;, Expression&lt;Func&lt;TValue, TTarget&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TTarget, TValue&gt;&gt;'</Item>
+              </Issue>
+              <Issue>
+               <Item>'MustHaveUniqueValueSpec&lt;TTarget, TValue&gt;.MustHaveUniqueValueSpec(Expression&lt;Func&lt;TTarget, TValue&gt;&gt;, Expression&lt;Func&lt;TValue, TTarget&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TValue, TTarget&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsSatisfiedBy(!0)">
+            <Messages>
+             <Message TypeName="NormalizeStringsToUppercase" Category="Microsoft.Globalization" CheckId="CA1308" Created="2015-09-30 17:27:43Z">
+              <Issue Name="ToUpperInvariant">
+               <Item>'MustHaveUniqueValueSpec&lt;TTarget, TValue&gt;.IsSatisfiedBy(TTarget)'</Item>
+               <Item>'string.ToLowerInvariant()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#m_getByName">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'MustHaveUniqueValueSpec&lt;TTarget, TValue&gt;.m_getByName'</Item>
+               <Item>'Expression&lt;Func&lt;TValue, TTarget&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#m_getProperty">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'MustHaveUniqueValueSpec&lt;TTarget, TValue&gt;.m_getProperty'</Item>
+               <Item>'Expression&lt;Func&lt;TTarget, TValue&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#NotSatisfiedReasonText">
+            <Messages>
+             <Message TypeName="DoNotDeclareStaticMembersOnGenericTypes" Category="Microsoft.Design" CheckId="CA1000" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'MustHaveUniqueValueSpec&lt;TTarget, TValue&gt;.NotSatisfiedReasonText'</Item>
+               <Item>'MustHaveUniqueValueSpec&lt;TTarget, TValue&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="ProjectSample.Infrastructure.Framework.Domain">
+        <Types>
+         <Type Name="DomainServiceBase`2">
+          <Members>
+           <Member Name="#Count(System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!0,System.Boolean&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'DomainServiceBase&lt;TEntity, TMainRepository&gt;.Count(Expression&lt;Func&lt;TEntity, bool&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TEntity, bool&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetAscending`1(System.Int32,System.Int32,System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!0,System.Boolean&gt;&gt;,System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!0,!!0&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'DomainServiceBase&lt;TEntity, TMainRepository&gt;.GetAscending&lt;TOrderByKey&gt;(int, int, Expression&lt;Func&lt;TEntity, bool&gt;&gt;, Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;'</Item>
+              </Issue>
+              <Issue>
+               <Item>'DomainServiceBase&lt;TEntity, TMainRepository&gt;.GetAscending&lt;TOrderByKey&gt;(int, int, Expression&lt;Func&lt;TEntity, bool&gt;&gt;, Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TEntity, bool&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetDescending`1(System.Int32,System.Int32,System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!0,System.Boolean&gt;&gt;,System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!0,!!0&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'DomainServiceBase&lt;TEntity, TMainRepository&gt;.GetDescending&lt;TOrderByKey&gt;(int, int, Expression&lt;Func&lt;TEntity, bool&gt;&gt;, Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;'</Item>
+              </Issue>
+              <Issue>
+               <Item>'DomainServiceBase&lt;TEntity, TMainRepository&gt;.GetDescending&lt;TOrderByKey&gt;(int, int, Expression&lt;Func&lt;TEntity, bool&gt;&gt;, Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TEntity, bool&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DomainServiceExtensions">
+          <Members>
+           <Member Name="#Get`1(ProjectSample.Infrastructure.Framework.Domain.IDomainService`1&lt;!!0&gt;,System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!!0,System.Boolean&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'DomainServiceExtensions.Get&lt;TEntity&gt;(this IDomainService&lt;TEntity&gt;, Expression&lt;Func&lt;TEntity, bool&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TEntity, bool&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetAscending`2(ProjectSample.Infrastructure.Framework.Domain.IDomainService`1&lt;!!0&gt;,System.Int32,System.Int32,System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!!0,!!1&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'DomainServiceExtensions.GetAscending&lt;TEntity, TOrderByKey&gt;(this IDomainService&lt;TEntity&gt;, int, int, Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetAscending`2(ProjectSample.Infrastructure.Framework.Domain.IDomainService`1&lt;!!0&gt;,System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!!0,!!1&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'DomainServiceExtensions.GetAscending&lt;TEntity, TOrderByKey&gt;(this IDomainService&lt;TEntity&gt;, Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetDescending`2(ProjectSample.Infrastructure.Framework.Domain.IDomainService`1&lt;!!0&gt;,System.Int32,System.Int32,System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!!0,!!1&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'DomainServiceExtensions.GetDescending&lt;TEntity, TOrderByKey&gt;(this IDomainService&lt;TEntity&gt;, int, int, Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetDescending`2(ProjectSample.Infrastructure.Framework.Domain.IDomainService`1&lt;!!0&gt;,System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!!0,!!1&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'DomainServiceExtensions.GetDescending&lt;TEntity, TOrderByKey&gt;(this IDomainService&lt;TEntity&gt;, Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetDescending`2(ProjectSample.Infrastructure.Framework.Domain.IDomainService`1&lt;!!0&gt;,System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!!0,System.Boolean&gt;&gt;,System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!!0,!!1&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'DomainServiceExtensions.GetDescending&lt;TEntity, TOrderByKey&gt;(this IDomainService&lt;TEntity&gt;, Expression&lt;Func&lt;TEntity, bool&gt;&gt;, Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;'</Item>
+              </Issue>
+              <Issue>
+               <Item>'DomainServiceExtensions.GetDescending&lt;TEntity, TOrderByKey&gt;(this IDomainService&lt;TEntity&gt;, Expression&lt;Func&lt;TEntity, bool&gt;&gt;, Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TEntity, bool&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="HistoryEntityBase`1">
+          <Members>
+           <Member Name="#.ctor(!0,ProjectSample.Infrastructure.Framework.Domain.HistoryKind)">
+            <Messages>
+             <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'HistoryEntityBase&lt;TTarget&gt;.HistoryEntityBase(TTarget, HistoryKind)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IDomainRepository`1">
+          <Members>
+           <Member Name="#FindAll(System.Int32,System.Int32,System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!0,System.Boolean&gt;&gt;,System.Func`2&lt;System.Collections.Generic.IEnumerable`1&lt;!0&gt;,System.Collections.Generic.IEnumerable`1&lt;!0&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'IDomainRepository&lt;TEntity&gt;.FindAll(int, int, Expression&lt;Func&lt;TEntity, bool&gt;&gt;, Func&lt;IEnumerable&lt;TEntity&gt;, IEnumerable&lt;TEntity&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TEntity, bool&gt;&gt;'</Item>
+              </Issue>
+              <Issue>
+               <Item>'IDomainRepository&lt;TEntity&gt;.FindAll(int, int, Expression&lt;Func&lt;TEntity, bool&gt;&gt;, Func&lt;IEnumerable&lt;TEntity&gt;, IEnumerable&lt;TEntity&gt;&gt;)'</Item>
+               <Item>'Func&lt;IEnumerable&lt;TEntity&gt;, IEnumerable&lt;TEntity&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IDomainService`1">
+          <Members>
+           <Member Name="#Get(System.Int32,System.Int32,System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!0,System.Boolean&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'IDomainService&lt;TEntity&gt;.Get(int, int, Expression&lt;Func&lt;TEntity, bool&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TEntity, bool&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+             <Message Id="Get" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Created="2015-09-30 17:27:43Z">
+              <Issue Name="Member">
+               <Item>'IDomainService&lt;TEntity&gt;.Get(int, int, Expression&lt;Func&lt;TEntity, bool&gt;&gt;)'</Item>
+               <Item>Get</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetAscending`1(System.Int32,System.Int32,System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!0,System.Boolean&gt;&gt;,System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!0,!!0&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'IDomainService&lt;TEntity&gt;.GetAscending&lt;TOrderByKey&gt;(int, int, Expression&lt;Func&lt;TEntity, bool&gt;&gt;, Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;'</Item>
+              </Issue>
+              <Issue>
+               <Item>'IDomainService&lt;TEntity&gt;.GetAscending&lt;TOrderByKey&gt;(int, int, Expression&lt;Func&lt;TEntity, bool&gt;&gt;, Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TEntity, bool&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetDescending`1(System.Int32,System.Int32,System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!0,System.Boolean&gt;&gt;,System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;!0,!!0&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'IDomainService&lt;TEntity&gt;.GetDescending&lt;TOrderByKey&gt;(int, int, Expression&lt;Func&lt;TEntity, bool&gt;&gt;, Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;'</Item>
+              </Issue>
+              <Issue>
+               <Item>'IDomainService&lt;TEntity&gt;.GetDescending&lt;TOrderByKey&gt;(int, int, Expression&lt;Func&lt;TEntity, bool&gt;&gt;, Expression&lt;Func&lt;TEntity, TOrderByKey&gt;&gt;)'</Item>
+               <Item>'Expression&lt;Func&lt;TEntity, bool&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IPreFilterable`1">
+          <Members>
+           <Member Name="#PreFilter">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'IPreFilterable&lt;TDomainEntity&gt;.PreFilter'</Item>
+               <Item>'Expression&lt;Func&lt;TDomainEntity, bool&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Money">
+          <Members>
+           <Member Name="#Reais(System.Decimal)">
+            <Messages>
+             <Message Id="Reais" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2015-09-30 17:27:43Z">
+              <Issue Name="Member">
+               <Item>Reais</Item>
+               <Item>'Money.Reais(decimal)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="ProjectSample.Infrastructure.Framework.Globalization">
+        <Types>
+         <Type Name="GlobalizationHelper">
+          <Members>
+           <Member Name="#GetText(System.Boolean,System.Object,System.Object,System.Boolean)">
+            <Messages>
+             <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Created="2015-09-30 17:27:43Z">
+              <Issue>
+               <Item>'GlobalizationHelper.GetText(bool, object, object, bool)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="ProjectSample.Infrastructure.Framework.Linq">
+        <Types>
+         <Type Name="IFilterResult">
+          <Members>
+           <Member Name="#GetEntities()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2015-09-30 17:27:43Z">
+              <Issue Certainty="50">
+               <Item>'IFilterResult.GetEntities()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="ProjectSample.Infrastructure.Framework.Runtime">
+        <Types>
+         <Type Name="IRuntimePermission">
+          <Messages>
+           <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Created="2015-09-30 17:27:43Z">
+            <Issue Name="TypeNoAlternate">
+             <Item>'IRuntimePermission'</Item>
+             <Item>Permission</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="IRuntimeUser">
+          <Members>
+           <Member Name="#Regionals">
+            <Messages>
+             <Message Id="Regionals" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2015-09-30 17:27:43Z">
+              <Issue Name="Member">
+               <Item>Regionals</Item>
+               <Item>'IRuntimeUser.Regionals'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Subregionals">
+            <Messages>
+             <Message Id="Subregionals" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2015-09-30 17:27:43Z">
+              <Issue Name="Member">
+               <Item>Subregionals</Item>
+               <Item>'IRuntimeUser.Subregionals'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="MemoryRuntimeUser">
+          <Members>
+           <Member Name="#SubstituingRoleIds">
+            <Messages>
+             <Message Id="Substituing" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2015-09-30 17:27:43Z">
+              <Issue Name="Member">
+               <Item>Substituing</Item>
+               <Item>'MemoryRuntimeUser.SubstituingRoleIds'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="RuntimeEnvironment">
+          <Members>
+           <Member Name="#ContinousIntegration">
+            <Messages>
+             <Message Id="Continous" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2015-09-30 17:27:43Z">
+              <Issue Name="Member">
+               <Item>Continous</Item>
+               <Item>'RuntimeEnvironment.ContinousIntegration'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/ProjectSample.Infrastructure.Repositories/bin/DEV/ProjectSample.Infrastructure.Repositories.dll">
+    <Modules>
+     <Module Name="projectsample.infrastructure.repositories.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2015-09-30 17:27:43Z">
+        <Issue Name="NoStrongName">
+         <Item>'ProjectSample.Infrastructure.Repositories.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2015-09-30 17:27:43Z">
+        <Issue>
+         <Item>'ProjectSample.Infrastructure.Repositories.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/ProjectSample.Infrastructure.Web/bin/DEV/ProjectSample.Infrastructure.Web.dll">
+    <Modules>
+     <Module Name="projectsample.infrastructure.web.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2015-09-30 17:27:43Z">
+        <Issue Name="NoStrongName">
+         <Item>'ProjectSample.Infrastructure.Web.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Rules>
+   <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+    <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040">
+    <Resolution Name="Default">Define a custom attribute to replace {0}.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
+    <Resolution Name="Default">Consider merging the types defined in '{0}' with another namespace.</Resolution>
+   </Rule>
+   <Rule TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227">
+    <Resolution Name="Default">Change {0} to be read-only by removing the property setter.</Resolution>
+   </Rule>
+   <Rule TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702">
+    <Resolution Name="MemberShouldBeDiscreteTerm">The compound word '{0}' in member name {1} exists as a discrete term. If your usage is intended to be single word, case it as '{2}' or strip the first token entirely if it represents any sort of Hungarian notation.</Resolution>
+   </Rule>
+   <Rule TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026">
+    <Resolution Name="Default">Replace method {0} with an overload that supplies all default arguments.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214">
+    <Resolution Name="Default">{0} contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: {1}</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotDeclareStaticMembersOnGenericTypes" Category="Microsoft.Design" CheckId="CA1000">
+    <Resolution Name="Default">Remove {0} from {1} or make it an instance member.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006">
+    <Resolution Name="Default">Consider a design where {0} doesn't nest generic type {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+    <Resolution Name="Member">Correct the spelling of '{0}' in member name {1} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711">
+    <Resolution Name="TypeNoAlternate">Rename type name {0} so that it does not end in '{1}'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716">
+    <Resolution Name="Member">Rename virtual/interface member {0} so that it no longer conflicts with the reserved language keyword '{1}'. Using a reserved keyword as the name of a virtual/interface member makes it harder for consumers in other languages to override/implement the member.</Resolution>
+   </Rule>
+   <Rule TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033">
+    <Resolution Name="Default">Make {0} sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of {1} and is visible to derived classes.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+    <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824">
+    <Resolution Name="Default">Because assembly {0} contains a ResX-based resource file, mark it with the NeutralResourcesLanguage attribute, specifying the language of the resources within the assembly. This could improve lookup performance the first time a resource is retrieved.</Resolution>
+   </Rule>
+   <Rule TypeName="NormalizeStringsToUppercase" Category="Microsoft.Globalization" CheckId="CA1308">
+    <Resolution Name="ToUpperInvariant">In method {0}, replace the call to {1} with String.ToUpperInvariant().</Resolution>
+   </Rule>
+   <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+    <Resolution Name="Default">Parameter {0} of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   </Rule>
+   <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+    <Resolution Name="Default">Change {0} to a property if appropriate.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>
