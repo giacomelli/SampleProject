@@ -1,0 +1,1444 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SpecFlowHelper</name>
+    </assembly>
+    <members>
+        <member name="F:SpecFlowHelper.Configuration.AppConfig.UrlFormat">
+            <summary>
+            The URL format: BaseUrl + RelativeUrl.
+            </summary>
+            <example>
+            If you are using AngularJs, de UrlFormat will be: "{0}/#/{1}".
+            </example>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.WebElementExtensions">
+            <summary>
+            WebElement extension methods.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.WebElementExtensions.Write(SpecFlowHelper.Containers.InputContainer,System.String)">
+            <summary>
+            Writes the specified value.
+            </summary>
+            <param name="input">The input.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.WebElementExtensions.PressEnter(SpecFlowHelper.Containers.InputContainer)">
+            <summary>
+            Press the enter.
+            </summary>
+            <param name="input">The input.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.WebElementExtensions.PressTab(SpecFlowHelper.Containers.InputContainer)">
+            <summary>
+            Press the tab.
+            </summary>
+            <param name="input">The input.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.AssertHelper.AssertUrlContains(System.String)">
+            <summary>
+            Verifica se a URL atual contém com a porção informada.
+            </summary>
+            <param name="partialUrl">A porção que URL atual deve conter.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.AssertHelper.AssertTextExists(System.String)">
+            <summary>
+            Verifica se um texto existe no corpo da página.
+            </summary>
+            <param name="text">O texto a ser verificado.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.AssertHelper.AssertLinkExists(System.String)">
+            <summary>
+            Verifica se um link com texto informado.
+            </summary>
+            <param name="text">O texto a ser verificado.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.AssertHelper.AssertTextNotExists(System.String)">
+            <summary>
+            Verifica se um texto NÃO existe no corpo da página.
+            </summary>
+            <param name="text">O texto a ser verificado.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.AssertHelper.AssertTextAreEqual(System.String,OpenQA.Selenium.By)">
+            <summary>
+            Verifica se a propriedade Text do elemento retornado por By é iqual ao texto esperado.
+            </summary>
+            <param name="expectedText">O texto esperado.</param>
+            <param name="by">O seletor do elemento.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.AssertHelper.AssertTextAreNotEqual(System.String,OpenQA.Selenium.By)">
+            <summary>
+            Verifica se a propriedade Text do elemento retornado por By NÃO é igual ao texto esperado.
+            </summary>
+            <param name="expectedText">O texto esperado.</param>
+            <param name="by">O seletor do elemento.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.AssertHelper.AssertValueAreEqual(System.String,OpenQA.Selenium.By)">
+            <summary>
+            Verifica se o atributo "value" do elemento retornado por By é igual ao valor esperado.
+            </summary>
+            <param name="expectedValue">O valor esperado.</param>
+            <param name="by">O seletor do elemento.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.AssertHelper.AssertValueIsNotEmpty(OpenQA.Selenium.By)">
+            <summary>
+            Verifica se o atributo "value" do elemento retornado por by NÃO é vazio.
+            </summary>
+            <param name="by">O seletor do elemento.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.AssertHelper.AssertDropdownItem(System.String,OpenQA.Selenium.By)">
+            <summary>
+            Verifica se o texto do item selecionado na dropdown retornada por by é igual ao texto esperado.
+            </summary>
+            <param name="expectedSelectedText">O texto esperado para o item selecionado.</param>
+            <param name="by">O seletor do elemento.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.AssertHelper.AssertIsEnabled(OpenQA.Selenium.By)">
+            <summary>
+            Verifica se os elementos retornados por by estão habilitados.
+            </summary>
+            <param name="by">O seletor do elemento.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.AssertHelper.AssertIsDisabled(OpenQA.Selenium.By)">
+            <summary>
+            Verifica se os elementos retornados por by estão desabilitados.
+            </summary>
+            <param name="by">O seletor do elemento.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.AssertHelper.AssertIsChecked(OpenQA.Selenium.By)">
+            <summary>
+            Verifica se as checkboxes retornadas por by estão marcadas.
+            </summary>
+            <param name="by">O seletor do elemento.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.AssertHelper.AssertIsNotChecked(OpenQA.Selenium.By)">
+            <summary>
+            Verifica se as checkboxes retornadas por by NÃO estão marcadas.
+            </summary>
+            <param name="by">O seletor do elemento.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.AssertHelper.AssertIsElementPresent(OpenQA.Selenium.By)">
+            <summary>
+            Verifica se o elemento está presente na página.
+            </summary>
+            <param name="by">O seletor do elemento.</param>
+            <returns>True se está presente, false no contrário.</returns>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.AssertHelper.AssertIsElementNotPresent(OpenQA.Selenium.By)">
+            <summary>
+            Verifica se o elemento não está presente na página.
+            </summary>
+            <param name="by">O seletor do elemento.</param>
+            <returns>True se está presente, false no contrário.</returns>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.ConfigSteps">
+            <summary>
+            Config steps.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.ConfigSteps.WhenChangeWebConfigKey(System.String,System.String)">
+            <summary>
+            When change web.config key.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.ComboboxSteps">
+            <summary>
+            Combobox steps.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.ComboboxSteps.WhenTypeInTheComboboxWithSearch(System.String,System.String)">
+            <summary>
+            When type in the combobox with search.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="field">The field.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.ComboboxSteps.WhenTypeEnterInTheComboboxWithSearch(System.String)">
+            <summary>
+            When type enter in the combobox with search.
+            </summary>
+            <param name="field">The field.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.ComboboxSteps.ThenTheComboboxWithSearchShouldHaveTextsSelected(System.String,System.String)">
+            <summary>
+            Then the combobox with search should have texts selected.
+            </summary>
+            <param name="field">The field.</param>
+            <param name="texts">The texts.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.ComboboxSteps.WhenRemoveTheItemFromComboboxWithSearch(System.String,System.String)">
+            <summary>
+            When remove the item from combobox with search.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="field">The field.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.ComboboxSteps.ThenTheComboboxShouldHaveTextSelected(System.String,System.String)">
+            <summary>
+            Then the combobox should have text selected.
+            </summary>
+            <param name="field">The selected identifier.</param>
+            <param name="text">The text.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.ComboboxSteps.WhenSelectInTheCombobox(System.String,System.String)">
+            <summary>
+            When select in the combobox.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="field">The field.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.ButtonSteps">
+            <summary>
+            Buttons 
+            steps.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.ButtonSteps.WhenClickInTheButton(System.String)">
+            <summary>
+            When click in the button.
+            </summary>
+            <param name="label">The button label.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.BadgeSteps">
+            <summary>
+            Badge steps.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.CheckboxSteps">
+            <summary>
+            Checkbox steps.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.CheckboxSteps.WhenCheckTheCheckbox(System.String)">
+            <summary>
+            When check the checkbox.
+            </summary>
+            <param name="checkbox">The checkbox.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.CheckboxSteps.WhenUncheckTheCheckbox(System.String)">
+            <summary>
+            Whens uncheck the checkbox.
+            </summary>
+            <param name="checkbox">The checkbox.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.BrowserSteps">
+            <summary>
+            Browser steps.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.Default.DefaultInfrastructureStepsStrategy">
+            <summary>
+            Default infrastructure steps strategy.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.Default.DefaultInfrastructureStepsStrategy.WhenClearWebApiCache">
+            <summary>
+            When clear web API cache.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.Default.DefaultInfrastructureStepsStrategy.WhenReinitializeDBAndServers">
+            <summary>
+            When reinitialize database and servers.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.Default.DefaultInfrastructureStepsStrategy.WhenReinitializeDBAndServerOneTimeToFeature">
+            <summary>
+            When reinitialize database and server one time to feature.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.Default.DefaultDownloadStepsStrategy">
+            <summary>
+            Default download steps strategy.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.Default.DefaultDownloadStepsStrategy.WhenClearTheDownloadsFolder">
+            <summary>
+            When clear the downloads folder.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.Default.DefaultDownloadStepsStrategy.ThenShouldExistsAFileWithTheNameInTheDownloadsFolder(System.String)">
+            <summary>
+            Then should exists a file with the name in the downloads folder.
+            </summary>
+            <param name="filename">The filename.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.Default.DefaultDownloadStepsStrategy.ThenShouldExistsFilesWithTheExtensionInTheDownloadsFolder(System.Int32,System.String)">
+            <summary>
+            Then should exists files with the extension in the downloads folder.
+            </summary>
+            <param name="fileCount">The file count.</param>
+            <param name="fileExtension">The file extension.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.Default.DefaultConfigStepsStrategy">
+            <summary>
+            Default config steps strategy.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.Default.DefaultConfigStepsStrategy.WhenChangeWebConfigKey(System.String,System.String)">
+            <summary>
+            When change web.config key.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.Default.DefaultCheckboxStepsStrategy">
+            <summary>
+            Default checkbox steps strategy.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.Default.DefaultCheckboxStepsStrategy.WhenCheckTheCheckbox(System.String)">
+            <summary>
+            When check the checkbox.
+            </summary>
+            <param name="checkbox">The checkbox.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.Default.DefaultCheckboxStepsStrategy.WhenUncheckTheCheckbox(System.String)">
+            <summary>
+            Whens uncheck the checkbox.
+            </summary>
+            <param name="checkbox">The checkbox.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.Default.DefaultButtonStepsStrategy">
+            <summary>
+            Default button steps strategy.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.Default.DefaultButtonStepsStrategy.WhenClickInTheButton(System.String)">
+            <summary>
+            When click in the button.
+            </summary>
+            <param name="label">The button label.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.Default.DefaultBadgeStepsStrategy">
+            <summary>
+            Default badge steps strategy.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.Default.DefaultBadgeStepsStrategy.ThenShouldShowTheBadgeWithTheText(System.String)">
+            <summary>
+            Then should show the badge with the text.
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.Default.DefaultUploadStepsStrategy">
+            <summary>
+            Default upload steps strategy.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.Default.DefaultUploadStepsStrategy.WhenUploadTheFile(System.String)">
+            <summary>
+            When upload the file.
+            </summary>
+            <param name="relativeFileName">The relative filename.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.Default.DefaultUploadStepsStrategy.WhenUploadInTheFile(System.String,System.String)">
+            <summary>
+            When the upload in field the file.
+            </summary>
+            <param name="field">The field.</param>
+            <param name="relativeFileName">The relative filename.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.Default.DefaultUploadStepsStrategy.WhenUploadTheFileInDownloadsFolder(System.String)">
+            <summary>
+            When the upload the file in downloads folder.
+            </summary>
+            <param name="relativeFileName">The relative filename.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.Default.DefaultBrowserStepsStrategy">
+            <summary>
+            Default browser steps strategy.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.Default.DefaultBrowserStepsStrategy.WhenConfirmTheAlert">
+            <summary>
+            Whens the confirm the alert.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.IInfrastructureStepsStrategy">
+            <summary>
+            Defines the interface for infrastructure steps strategies.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IInfrastructureStepsStrategy.WhenClearWebApiCache">
+            <summary>
+            When clear web API cache.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IInfrastructureStepsStrategy.WhenReinitializeDBAndServers">
+            <summary>
+            When reinitialize database and servers.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IInfrastructureStepsStrategy.WhenReinitializeDBAndServerOneTimeToFeature">
+            <summary>
+            When reinitialize database and server one time to feature.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.IGridStepsStrategy">
+            <summary>
+            Defines the interface for grid steps strategies.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IGridStepsStrategy.ThenTheGridShouldHaveRows(System.Int32)">
+            <summary>
+            Then the grid should have rows.
+            </summary>
+            <param name="rows">The rows.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IGridStepsStrategy.WhenClickInTheFirstGridRow">
+            <summary>
+            When click in the first grid row.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IGridStepsStrategy.WhenClickInTheGridRow(System.Int32)">
+            <summary>
+            When click in the grid row.
+            </summary>
+            <param name="row">The row.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IGridStepsStrategy.WhenPaginateToTheNextGridPage">
+            <summary>
+            When paginate to the next grid page.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IGridStepsStrategy.WhenPaginateToLastGridPage">
+            <summary>
+            When paginate to last grid page.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IGridStepsStrategy.WhenClickInTheGridRowWithTheText(System.String)">
+            <summary>
+            When click in the grid row with the text.
+            </summary>
+            <param name="text">The text.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IGridStepsStrategy.WhenClickInTheRemoveButtonInTheGridRowWithTheText(System.String)">
+            <summary>
+            When click in the remove button in the grid row with the text.
+            </summary>
+            <param name="text">The text.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.IDownloadStepsStrategy">
+            <summary>
+            Defines the interface for download steps strategies.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IDownloadStepsStrategy.WhenClearTheDownloadsFolder">
+            <summary>
+            When clear the downloads folder.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IDownloadStepsStrategy.ThenShouldExistsAFileWithTheNameInTheDownloadsFolder(System.String)">
+            <summary>
+            Then should exists a file with the name in the downloads folder.
+            </summary>
+            <param name="filename">The filename.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IDownloadStepsStrategy.ThenShouldExistsFilesWithTheExtensionInTheDownloadsFolder(System.Int32,System.String)">
+            <summary>
+            Then should exists files with the extension in the downloads folder.
+            </summary>
+            <param name="fileCount">The file count.</param>
+            <param name="fileExtension">The file extension.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.IConfigStepsStrategy">
+            <summary>
+            Defines the interface for config steps strategies.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IConfigStepsStrategy.WhenChangeWebConfigKey(System.String,System.String)">
+            <summary>
+            When change web.config key.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.ICheckboxStepsStrategy">
+            <summary>
+            Defines the interface for checkbox steps strategies.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.ICheckboxStepsStrategy.WhenCheckTheCheckbox(System.String)">
+            <summary>
+            When check the checkbox.
+            </summary>
+            <param name="checkbox">The checkbox.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.ICheckboxStepsStrategy.WhenUncheckTheCheckbox(System.String)">
+            <summary>
+            Whens uncheck the checkbox.
+            </summary>
+            <param name="checkbox">The checkbox.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.IButtonStepsStrategy">
+            <summary>
+            Defines the interface for buton steps strategies.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IButtonStepsStrategy.WhenClickInTheButton(System.String)">
+            <summary>
+            When click in the button.
+            </summary>
+            <param name="label">The button label.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.IBadgeStepsStrategy">
+            <summary>
+            Defines the interface for badge steps strategies.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IBadgeStepsStrategy.ThenShouldShowTheBadgeWithTheText(System.String)">
+            <summary>
+            Then should show the badge with the text.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.IUploadStepsStrategy">
+            <summary>
+            Defines the interface for upload steps strategies.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IUploadStepsStrategy.WhenUploadTheFile(System.String)">
+            <summary>
+            When upload the file.
+            </summary>
+            <param name="relativeFileName">The relative filename.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IUploadStepsStrategy.WhenUploadInTheFile(System.String,System.String)">
+            <summary>
+            When the upload in field the file.
+            </summary>
+            <param name="field">The field.</param>
+            <param name="relativeFileName">The relative filename.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IUploadStepsStrategy.WhenUploadTheFileInDownloadsFolder(System.String)">
+            <summary>
+            When upload the file in downloads folder.
+            </summary>
+            <param name="relativeFileName">The relative filename.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.jQuery.jQueryComboboxStepsStrategy">
+            <summary>
+            jQuery combobox steps strategy.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.jQuery.jQueryComboboxStepsStrategy.WhenTypeEnterInTheComboboxWithSearch(System.String)">
+            <summary>
+            Whens the type enter in the combobox with search.
+            </summary>
+            <param name="field">The field.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.jQuery.jQueryComboboxStepsStrategy.ThenTheComboboxShouldHaveTextSelected(System.String,System.String)">
+            <summary>
+            Thens the combobox should have text selected.
+            </summary>        
+            <param name="field">The field.</param>
+            /// <param name="text">The text.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.jQuery.jQueryComboboxStepsStrategy.WhenSelectInTheCombobox(System.String,System.String)">
+            <summary>
+            Whens the select in the combobox.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="field">The selected identifier.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.StepsStrategyBase`1">
+            <summary>
+            Defines an interface for steps strategies.
+            </summary>
+            <typeparam name="TSteps">The type of the steps.</typeparam>
+        </member>
+        <member name="P:SpecFlowHelper.Steps.Strategies.StepsStrategyBase`1.CurrentSteps">
+            <summary>
+            Gets or sets the current steps.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.IBrowserStepsStrategy">
+            <summary>
+            Defines the interface for browser steps strategies.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IBrowserStepsStrategy.WhenConfirmTheAlert">
+            <summary>
+            When confirm the alert.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.IStepsStrategy`1">
+            <summary>
+            Defines an interface for steps strategies.
+            </summary>
+            <typeparam name="TSteps">The type of the steps.</typeparam>
+        </member>
+        <member name="P:SpecFlowHelper.Steps.Strategies.IStepsStrategy`1.CurrentSteps">
+            <summary>
+            Gets or sets the current steps.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.IComboboxStepsStrategy">
+            <summary>
+            Defines the interface for combobox steps strategies.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IComboboxStepsStrategy.WhenTypeInTheComboboxWithSearch(System.String,System.String)">
+            <summary>
+            When type in the combobox with search.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="field">The field.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IComboboxStepsStrategy.WhenTypeEnterInTheComboboxWithSearch(System.String)">
+            <summary>
+            When type enter in the combobox with search.
+            </summary>
+            <param name="field">The field.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IComboboxStepsStrategy.ThenTheComboboxWithSearchShouldHaveTextsSelected(System.String,System.String)">
+            <summary>
+            Then the combobox with search should have texts selected.
+            </summary>
+            <param name="field">The field.</param>
+            <param name="texts">The texts.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IComboboxStepsStrategy.WhenRemoveTheItemFromComboboxWithSearch(System.String,System.String)">
+            <summary>
+            When remove the item from combobox with search.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="field">The field.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IComboboxStepsStrategy.ThenTheComboboxShouldHaveTextSelected(System.String,System.String)">
+            <summary>
+            Then the combobox should have text selected.
+            </summary>
+            <param name="field">The selected identifier.</param>
+            <param name="text">The text.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.IComboboxStepsStrategy.WhenSelectInTheCombobox(System.String,System.String)">
+            <summary>
+            When select in the combobox.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="field">The field.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.Strategies.StrategyFactory">
+            <summary>
+            The strategies factory.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.Strategies.StrategyFactory.#cctor">
+            <summary>
+            Initializes the <see cref="T:SpecFlowHelper.Steps.Strategies.StrategyFactory"/> class.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.GridSteps">
+            <summary>
+            Grid steps.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.DownloadSteps.WhenClearTheDownloadsFolder">
+            <summary>
+            When clear the downloads folder.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.DownloadSteps.ThenShouldExistsAFileWithTheNameInTheDownloadsFolder(System.String)">
+            <summary>
+            Then should exists a file with the name in the downloads folder.
+            </summary>
+            <param name="filename">The filename.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.DownloadSteps.ThenShouldExistsFilesWithTheExtensionInTheDownloadsFolder(System.Int32,System.String)">
+            <summary>
+            Then should exists files with the extension in the downloads folder.
+            </summary>
+            <param name="fileCount">The file count.</param>
+            <param name="fileExtension">The file extension.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.StepsBase">
+            <summary>
+            A base class for Steps.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Steps.StepsBase.Driver">
+            <summary>
+            Gets the web driver.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.StepHelper">
+            <summary>
+            Utilitários para steps;
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.StepHelper.#cctor">
+            <summary>
+            Initializes the <see cref="T:SpecFlowHelper.Steps.StepHelper"/> class.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Steps.StepHelper.Driver">
+            <summary>
+            Obtém o web driver.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Steps.StepHelper.BaseURL">
+            <summary>
+            Obtém ou define a URL base do teste.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.StepHelper.InitializeDriver">
+            <summary>
+            Inicializa o driver.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.StepHelper.Quit">
+            <summary>
+            Finaliza o driver.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.StepHelper.FindElement(OpenQA.Selenium.By)">
+            <summary>
+            Localiza o elemento especificado por by.
+            <remarks>
+            Realiza algumas tentativas caso o elemento ainda não esteja presente na página.
+            </remarks>
+            </summary>
+            <param name="by">O seletor do elemento.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.StepHelper.IsElementPresent(OpenQA.Selenium.By)">
+            <summary>
+            Verifica se o elemento existe.
+            </summary>
+            <param name="by"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.StepHelper.Click(OpenQA.Selenium.By,System.Int32)">
+            <summary>
+            Clicks on specified element.
+            </summary>
+            <param name="by">The element selector.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.StepHelper.ClickAny(System.Collections.Generic.IEnumerable{OpenQA.Selenium.By},System.Int32)">
+            <summary>
+            Clicks on the first element element available.
+            </summary>
+            <param name="by">The elements selectors.</param>
+            <param name="attempts">The attempts.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.StepHelper.DoubleClick(OpenQA.Selenium.By)">
+            <summary>
+            Executa um clique-duplo no elemento especificado por by.
+            </summary>
+            <param name="by">O seletor do elemento.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.StepHelper.SelectDropdownItem(OpenQA.Selenium.By,System.String)">
+            <summary>
+            Seleciona o item da dropdown retornada por by que possui o texto especificado.
+            </summary>
+            <param name="by">O seletor do elemento.</param>
+            <param name="itemText">O texto do item a ser selecionado.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.StepHelper.Select2DropdownItem(OpenQA.Selenium.By,System.String)">
+            <summary>
+            Seleciona um item da dropdown do tipo Select2
+            </summary>
+            <param name="by">O seletor do elemento.</param>
+            <param name="itemText">O texto do item a ser selecionado.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.StepHelper.WaitElementIsPresent(OpenQA.Selenium.By)">
+            <summary>
+            Realiza algumas tentativas caso o elemento retornado por by ainda não esteja presente na página.
+            </summary>
+            <param name="by">O seletor do elemento.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.StepHelper.WaitElementsArePresent(OpenQA.Selenium.By,System.Int32)">
+            <summary>
+            Realiza algumas tentativas caso os elementos retornados por by ainda não estejam presentes na página.
+            </summary>
+            <param name="by">O seletor do elemento.</param>
+            <param name="minLength">A quantidade mínima de elementos.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.StepHelper.AreElementsPresent(OpenQA.Selenium.By)">
+            <summary>
+            Verifica se os elementos estão presentes na página.
+            </summary>
+            <param name="by">O seletor dos elementos.</param>
+            <returns>True se estão presentes, false no contrário.</returns>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.StepHelper.EnterValue(OpenQA.Selenium.By,System.String,System.Boolean)">
+            <summary>
+            Entra o valor informado no elemento retornado por by.
+            </summary>
+            <param name="by">O seletor dos elementos.</param>
+            <param name="value">O valor.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.StepHelper.Clear(OpenQA.Selenium.By)">
+            <summary>
+            Limpo o Elemento
+            </summary>
+            <param name="by"></param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.StepHelper.Attempt(System.Func{System.Boolean},System.Int32,System.Int32)">
+            <summary>
+            Executa o comando o número de tentativas especificadas até que não aconteça exceção e que seja retornado true.
+            </summary>
+            <param name="command">O comando a ser executado.</param>
+            <param name="attempts">O número de tentativas.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Steps.UploadSteps">
+            <summary>
+            Upload steps.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.UploadSteps.WhenUploadTheFile(System.String)">
+            <summary>
+            When upload the file.
+            </summary>
+            <param name="relativeFileName">The relative filename.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.UploadSteps.WhenUploadInTheFile(System.String,System.String)">
+            <summary>
+            When the upload in field the file.
+            </summary>
+            <param name="field">The field.</param>
+            <param name="relativeFileName">The relative filename.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Steps.UploadSteps.WhenUploadTheFileInDownloadsFolder(System.String)">
+            <summary>
+            When upload the file in downloads folder.
+            </summary>
+            <param name="relativeFileName">The relative filename.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.Browser">
+            <summary>
+            Represents the current browser used in tests.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Browser.Current">
+            <summary>
+            Gets the current.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browser.Initialize(SpecFlowHelper.Integrations.Browsers.BrowserKind)">
+            <summary>
+            Initializes the browser.
+            </summary>
+            <param name="kind">The browser kind.</param>
+            <returns>The web driver.</returns>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.Browsers.BrowserBase">
+            <summary>
+            A base implementation of IBrowser.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.BrowserBase.#ctor(SpecFlowHelper.Integrations.Browsers.BrowserKind,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SpecFlowHelper.Integrations.Browsers.BrowserBase"/> class.
+            </summary>
+            <param name="kind">The browser kind.</param>
+            <param name="processName">The name of the browser process.</param>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Browsers.BrowserBase.Kind">
+            <summary>
+            Gets the kind.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Browsers.BrowserBase.Driver">
+            <summary>
+            Gets the web driver.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Browsers.BrowserBase.Proxy">
+            <summary>
+            Gets the proxy.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Browsers.BrowserBase.WaitMilliseconds">
+            <summary>
+            Gets the wait milliseconds used in steps for this specific browser.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.BrowserBase.Initialize(System.String,OpenQA.Selenium.Proxy)">
+            <summary>
+            Initializes the browser.
+            </summary>
+            <param name="driverFolder">The driver folder.</param>
+            <param name="proxy">The proxy.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.BrowserBase.Kill">
+            <summary>
+            Kills this instance.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.BrowserBase.NavigateToIframe(OpenQA.Selenium.By)">
+            <summary>
+            Navigates to iframe.
+            </summary>
+            <param name="by">The IFrame selector.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.BrowserBase.Renavigate">
+            <summary>
+            Re-navigates to current window.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.BrowserBase.NavigateBackToMainWindow">
+            <summary>
+            Navigates the back to main window.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.BrowserBase.PerformInitialize(System.String,OpenQA.Selenium.Proxy)">
+            <summary>
+            Performs the initialize of the browser.
+            </summary>
+            <param name="driverFolder">The driver folder.</param>
+            <param name="proxy">The proxy.</param>
+            <returns>The web driver.</returns>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.Browsers.ChromeBrowser">
+            <summary>
+            The default implementation to Chrome browser.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.ChromeBrowser.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SpecFlowHelper.Integrations.Browsers.ChromeBrowser"/> class.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.ChromeBrowser.PerformInitialize(System.String,OpenQA.Selenium.Proxy)">
+            <summary>
+            Performs the initialize of the browser.
+            </summary>
+            <param name="driverFolder">The driver folder.</param>
+            <param name="proxy">The proxy.</param>
+            <returns>
+            The web driver.
+            </returns>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.Browsers.PhantomJSBrowser">
+            <summary>
+            The default implementation to PhantomJS browser.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.PhantomJSBrowser.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SpecFlowHelper.Integrations.Browsers.PhantomJSBrowser"/> class.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.PhantomJSBrowser.PerformInitialize(System.String,OpenQA.Selenium.Proxy)">
+            <summary>
+            Performs the initialize of the browser.
+            </summary>
+            <param name="driverFolder">The driver folder.</param>
+            <param name="proxy">The proxy.</param>
+            <returns>
+            The web driver.
+            </returns>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.Browsers.IEBrowser">
+            <summary>
+            The default implementation to Internet Explorer browser.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.IEBrowser.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SpecFlowHelper.Integrations.Browsers.IEBrowser"/> class.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.IEBrowser.PerformInitialize(System.String,OpenQA.Selenium.Proxy)">
+            <summary>
+            Performs the initialize of the browser.
+            </summary>
+            <param name="driverFolder">The driver folder.</param>
+            <param name="proxy">The proxy.</param>
+            <returns>
+            The web driver.
+            </returns>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.Browsers.FirefoxBrowser">
+            <summary>
+            The default implementation to Firefox browser.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.FirefoxBrowser.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SpecFlowHelper.Integrations.Browsers.FirefoxBrowser"/> class.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.FirefoxBrowser.PerformInitialize(System.String,OpenQA.Selenium.Proxy)">
+            <summary>
+            Performs the initialize of the browser.
+            </summary>
+            <param name="driverFolder">The driver folder.</param>
+            <param name="proxy">The proxy.</param>
+            <returns>
+            The web driver.
+            </returns>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.Browsers.BrowserKind">
+            <summary>
+            Available browsers kind.
+            </summary>
+        </member>
+        <member name="F:SpecFlowHelper.Integrations.Browsers.BrowserKind.Chrome">
+            <summary>
+            The browser in use is Chrome.
+            </summary>
+        </member>
+        <member name="F:SpecFlowHelper.Integrations.Browsers.BrowserKind.Firefox">
+            <summary>
+            The browser in use is Firefox.
+            </summary>
+        </member>
+        <member name="F:SpecFlowHelper.Integrations.Browsers.BrowserKind.IE">
+            <summary>
+            The browser in use is IE.
+            </summary>
+        </member>
+        <member name="F:SpecFlowHelper.Integrations.Browsers.BrowserKind.PhantomJS">
+            <summary>
+            The browser in use is PhantomJS.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.Browsers.IBrowser">
+            <summary>
+            Defines an interface for browser used in tests.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Browsers.IBrowser.Kind">
+            <summary>
+            Gets the kind.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Browsers.IBrowser.Driver">
+            <summary>
+            Gets the web driver.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Browsers.IBrowser.Proxy">
+            <summary>
+            Gets the proxy.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Browsers.IBrowser.WaitMilliseconds">
+            <summary>
+            Gets the wait milliseconds used in steps for this specific browser.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.IBrowser.Initialize(System.String,OpenQA.Selenium.Proxy)">
+            <summary>
+            Initializes the browser.
+            </summary>
+            <param name="driverFolder">The driver folder.</param>
+            <param name="proxy">The proxy.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.IBrowser.Kill">
+            <summary>
+            Kills this instance.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.IBrowser.NavigateToIframe(OpenQA.Selenium.By)">
+            <summary>
+            Navigates to iframe.
+            </summary>
+            <param name="by">The IFrame selector.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.IBrowser.NavigateBackToMainWindow">
+            <summary>
+            Navigates the back to main window.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Browsers.IBrowser.Renavigate">
+            <summary>
+            Re-navigates to current window.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.UrlOpeningEventArgs">
+            <summary>
+            UrlOpening event args.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.UrlOpeningEventArgs.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SpecFlowHelper.Integrations.UrlOpeningEventArgs"/> class.
+            </summary>
+            <param name="baseUrl">The base URL.</param>
+            <param name="relativeUrl">The relative URL.</param>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.UrlOpeningEventArgs.BaseUrl">
+            <summary>
+            Gets or sets the base URL.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.UrlOpeningEventArgs.RelativeUrl">
+            <summary>
+            Gets or sets the relative URL.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.Database">
+            <summary>
+            Represents the current database used in tests.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Database.#cctor">
+            <summary>
+            Initializes the <see cref="T:SpecFlowHelper.Integrations.Database"/> class.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Database.Current">
+            <summary>
+            Gets the current.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Database.Initialize(System.Boolean)">
+            <summary>
+            Initializes the specified force.
+            </summary>
+            <param name="force">if set to <c>true</c> force the initialization.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Database.Ping">
+            <summary>
+            Performs a ping to database server.
+            </summary>
+            <returns>The roundtrip time.</returns>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Database.DiscoverDatabase">
+            <summary>
+            Discovers the database.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">No database server available!</exception>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.Databases.IDatabase">
+            <summary>
+            Defines an interface for database used in tests.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Databases.IDatabase.Server">
+            <summary>
+            Gets the server.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Databases.IDatabase.ConnectionString">
+            <summary>
+            Gets the connection string.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.Databases.SqlServerDatabase">
+            <summary>
+            A SQL Server's IDatabase implementation.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Databases.SqlServerDatabase.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SpecFlowHelper.Integrations.Databases.SqlServerDatabase"/> class.
+            </summary>
+            <param name="server">The server.</param>
+            <param name="connectionString">The connection string.</param>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Databases.SqlServerDatabase.Server">
+            <summary>
+            Gets the server.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Databases.SqlServerDatabase.ConnectionString">
+            <summary>
+            Gets the connection string.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.Environments.EnvironmentBase">
+            <summary>
+            A base class for test runtime environments.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Environments.EnvironmentBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SpecFlowHelper.Integrations.Environments.EnvironmentBase"/> class.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Environments.EnvironmentBase.Attempts">
+            <summary>
+            Gets or sets the how many attempts a step should try in this environment.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Environments.EnvironmentBase.WaitMilliseconds">
+            <summary>
+            Gets or sets the wait milliseconds.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Environments.EnvironmentBase.AvailableDatabases">
+            <summary>
+            Gets or sets the available databases.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Environments.EnvironmentBase.UseDatabasePingAsSleep">
+            <summary>
+            Gets or sets a value indicating whether should use database ping as sleep time.
+            </summary>
+            <value>
+            <c>true</c> if should use database ping as sleep time; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Environments.EnvironmentBase.ShouldAbortOnFirstTestError">
+            <summary>
+            Gets or sets a value indicating whether should abort on first test error.
+            </summary>
+            <value>
+            <c>true</c> if should abort on first test error; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Environments.EnvironmentBase.Initialize">
+            <summary>
+            Initializes the environment.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.Environments.ContinousIntegrationEnvironment">
+            <summary>
+            Represents a CI (Continuous Integration) environment.
+            <remarks>
+            This environment use environment variables defined on SO as it's config:
+            seleniumAttempts: defines the Attempts property.
+            seleniumImplicitlyWaitSeconds: defines the Selenium ImplicitlyWait value.
+            httpProxy: defines the proxy that should be used on browser.
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Environments.ContinousIntegrationEnvironment.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SpecFlowHelper.Integrations.Environments.ContinousIntegrationEnvironment"/> class.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Environments.ContinousIntegrationEnvironment.Initialize">
+            <summary>
+            Initializes the environment.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.Environments.DevelopmentEnvironment">
+            <summary>
+             Represents a development environment.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Environments.DevelopmentEnvironment.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SpecFlowHelper.Integrations.Environments.DevelopmentEnvironment"/> class.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.Environments.IEnvironment">
+            <summary>
+            Defines an interface for runtime test environment.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Environments.IEnvironment.Attempts">
+            <summary>
+            Gets the how many attempts a step should try in this environment.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Environments.IEnvironment.WaitMilliseconds">
+            <summary>
+            Gets the wait milliseconds.
+            </summary>
+            <value>
+            The wait milliseconds.
+            </value>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Environments.IEnvironment.AvailableDatabases">
+            <summary>
+            Gets the available databases.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Environments.IEnvironment.UseDatabasePingAsSleep">
+            <summary>
+            Gets a value indicating whether should use database ping as sleep time.
+            </summary>
+            <value>
+            <c>true</c> if should use database ping as sleep time; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.Environments.IEnvironment.ShouldAbortOnFirstTestError">
+            <summary>
+            Gets a value indicating whether should abort on first test error.
+            </summary>
+            <value>
+            <c>true</c> if should abort on first test error; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.Environments.IEnvironment.Initialize">
+            <summary>
+            Initializes the environment.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.ExecutionEvents">
+            <summary>
+            Raise some execution events.
+            </summary>
+        </member>
+        <member name="E:SpecFlowHelper.Integrations.ExecutionEvents.BrowserInitializing">
+            <summary>
+            Occurs when browser is initializing.
+            </summary>
+        </member>
+        <member name="E:SpecFlowHelper.Integrations.ExecutionEvents.BrowserInitialized">
+            <summary>
+            Occurs when browser is initialized.
+            </summary>
+        </member>
+        <member name="E:SpecFlowHelper.Integrations.ExecutionEvents.IframeNavigated">
+            <summary>
+            Occurs when navigated to an IFrame
+            </summary>
+        </member>
+        <member name="E:SpecFlowHelper.Integrations.ExecutionEvents.WebDriverInitialized">
+            <summary>
+            Occurs when web driver is initialized.
+            </summary>
+        </member>
+        <member name="E:SpecFlowHelper.Integrations.ExecutionEvents.RuntimeEnvironmentInitializing">
+            <summary>
+            Occurs when runtime environment is initializing.
+            </summary>
+        </member>
+        <member name="E:SpecFlowHelper.Integrations.ExecutionEvents.RuntimeEnvironmentInitialized">
+            <summary>
+            Occurs when runtime environment is initialized.
+            </summary>
+        </member>
+        <member name="E:SpecFlowHelper.Integrations.ExecutionEvents.DatabaseInitializing">
+            <summary>
+            Occurs when database is initializing.
+            </summary>
+        </member>
+        <member name="E:SpecFlowHelper.Integrations.ExecutionEvents.DatabaseInitialized">
+            <summary>
+            Occurs when database is initialized.
+            </summary>
+        </member>
+        <member name="E:SpecFlowHelper.Integrations.ExecutionEvents.ElementClicking">
+            <summary>
+            Occurs when element clicking.
+            </summary>
+        </member>
+        <member name="E:SpecFlowHelper.Integrations.ExecutionEvents.UrlOpening">
+            <summary>
+            Occurs when URL opening.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.EnvironmentKind">
+            <summary>
+            Available environment kinds.
+            </summary>
+        </member>
+        <member name="F:SpecFlowHelper.Integrations.EnvironmentKind.Development">
+            <summary>
+            The development environment.
+            </summary>
+        </member>
+        <member name="F:SpecFlowHelper.Integrations.EnvironmentKind.ContinousIntegration">
+            <summary>
+            The continous integration environment.
+            </summary>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.RuntimeEnvironment">
+            <summary>
+            Represent the tests runtime environment.
+            </summary>
+        </member>
+        <member name="P:SpecFlowHelper.Integrations.RuntimeEnvironment.Current">
+            <summary>
+            Gets the current environment.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.RuntimeEnvironment.Initialize(SpecFlowHelper.Integrations.Environments.IEnvironment)">
+            <summary>
+            Initializes the specified environment.
+            </summary>
+            <param name="environment">The environment.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Integrations.TeamCityLog">
+            <summary>
+            Writes logs to TeamCity build log.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.TeamCityLog.WriteFeatureBegin(System.String)">
+            <summary>
+            Writes the feature begin.
+            </summary>
+            <param name="title">The title.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.TeamCityLog.WriteScenarioBegin(System.String)">
+            <summary>
+            Writes the scenario begin.
+            </summary>
+            <param name="title">The title.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.TeamCityLog.WriteScenarioEnd(System.String)">
+            <summary>
+            Writes the scenario end.
+            </summary>
+            <param name="title">The title.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.TeamCityLog.WriteFeatureEnd(System.String)">
+            <summary>
+            Writes the feature end.
+            </summary>
+            <param name="title">The title.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.TeamCityLog.WriteTestMessage(System.String)">
+            <summary>
+            Writes the test message.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Integrations.TeamCityLog.WriteBuildLog(System.String)">
+            <summary>
+            Writes the build log.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Logging.LogHelper">
+            <summary>
+            The log helper.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Logging.LogHelper.#cctor">
+            <summary>
+            Initializes the <see cref="T:SpecFlowHelper.Logging.LogHelper"/> class.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Logging.LogHelper.Log(System.String,System.Object[])">
+            <summary>
+            Logs the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="T:SpecFlowHelper.Logging.Log4netLogStrategy">
+            <summary>
+            Estratégia de log.
+            </summary>
+        </member>
+        <member name="M:SpecFlowHelper.Logging.Log4netLogStrategy.#ctor(System.String)">
+            <summary>
+            Inicia uma nova instância da classe <see cref="!:LogStrategy"/>.
+            </summary>
+            <param name="loggerName">O nome do logger.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Logging.Log4netLogStrategy.WriteDebug(System.String,System.Object[])">
+            <summary>
+            Writes the debug log level message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="args">The message arguments.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Logging.Log4netLogStrategy.WriteWarning(System.String,System.Object[])">
+            <summary>
+            Writes the warning log level message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="args">The message arguments.</param>
+        </member>
+        <member name="M:SpecFlowHelper.Logging.Log4netLogStrategy.WriteError(System.String,System.Object[])">
+            <summary>
+            Writes the error log level message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="args">The message arguments.</param>
+        </member>
+    </members>
+</doc>
