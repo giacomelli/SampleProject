@@ -1,4 +1,4 @@
-version: 1.0.{build}
+version: 0.0.{build}
 os: Visual Studio 2015
 configuration: DEV
 environment:
@@ -10,17 +10,17 @@ nuget:
   account_feed: false
   project_feed: false
 before_build:
-- cmd: nuget restore .\src\ProjectSample.sln
+- cmd: nuget restore .\src\SampleProject.sln
 build:
-  project: src\ProjectSample.sln
+  project: src\SampleProject.sln
   verbosity: minimal
 
 after_build:
 - cmd: >-
-    "C:\Program Files (x86)\Microsoft Fxcop 10.0\FxCopCmd.exe" /project:.\src\ProjectSample.FxCop /out:fxcop-report.xml
+    "C:\Program Files (x86)\Microsoft Fxcop 10.0\FxCopCmd.exe" /project:.\src\SampleProject.FxCop /out:fxcop-report.xml
 
 test_script:
-  - ps: .\src\packages\OpenCover.4.6.166\tools\OpenCover.Console.exe -register:user  -output:opencoverCoverage.xml -target:"vstest.console.exe" -targetargs:"/logger:Appveyor \"src\ProjectSample.Infrastructure.Framework.UnitTests\bin\$env:CONFIGURATION\ProjectSample.Infrastructure.Framework.UnitTests.dll\" \"src\ProjectSample.Domain.UnitTests\bin\$env:CONFIGURATION\ProjectSample.Domain.UnitTests.dll\"" -targetdir:"src\ProjectSample.Domain.UnitTests\bin\$env:CONFIGURATION" -filter:"+[*]ProjectSample.* -[*.UnitTests]*"
+  - ps: .\src\packages\OpenCover.4.6.166\tools\OpenCover.Console.exe -register:user  -output:opencoverCoverage.xml -target:"vstest.console.exe" -targetargs:"/logger:Appveyor \"src\SampleProject.Infrastructure.Framework.UnitTests\bin\$env:CONFIGURATION\SampleProject.Infrastructure.Framework.UnitTests.dll\" \"src\SampleProject.Domain.UnitTests\bin\$env:CONFIGURATION\SampleProject.Domain.UnitTests.dll\"" -targetdir:"src\SampleProject.Domain.UnitTests\bin\$env:CONFIGURATION" -filter:"+[*]SampleProject.* -[*.UnitTests]*"
   - ps: .\src\packages\coveralls.net.0.6.0\tools\csmacnz.Coveralls.exe --opencover -i opencoverCoverage.xml --repoToken $env:COVERALLS_REPO_TOKEN --commitId $env:APPVEYOR_REPO_COMMIT --commitBranch $env:APPVEYOR_REPO_BRANCH --commitAuthor $env:APPVEYOR_REPO_COMMIT_AUTHOR --commitEmail $env:APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL --commitMessage $env:APPVEYOR_REPO_COMMIT_MESSAGE --jobId $env:APPVEYOR_JOB_ID
 
 artifacts:

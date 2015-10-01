@@ -1,8 +1,8 @@
-ProjectSample
+SampleProject
 ===========
-[![Build status](https://ci.appveyor.com/api/projects/status/wb7wfphj9af7050f?svg=true)](https://ci.appveyor.com/project/giacomelli/ProjectSample)
-[![Coverage Status](https://coveralls.io/repos/giacomelli/ProjectSample/badge.svg?branch=master&service=github)](https://coveralls.io/github/giacomelli/ProjectSample?branch=master) 
-[![License](http://img.shields.io/:license-MIT-blue.svg)](https://raw.githubusercontent.com/giacomelli/ProjectSample/master/LICENSE)
+[![Build status](https://ci.appveyor.com/api/projects/status/wb7wfphj9af7050f?svg=true)](https://ci.appveyor.com/project/giacomelli/SampleProject)
+[![Coverage Status](https://coveralls.io/repos/giacomelli/SampleProject/badge.svg?branch=master&service=github)](https://coveralls.io/github/giacomelli/SampleProject?branch=master) 
+[![License](http://img.shields.io/:license-MIT-blue.svg)](https://raw.githubusercontent.com/giacomelli/SampleProject/master/LICENSE)
 
 -------
 
@@ -18,9 +18,9 @@ Having troubles?
 How to improve it?
 ======
 
-Create a fork of [ProjectSample](https://github.com/giacomelli/ProjectSample/fork). 
+Create a fork of [SampleProject](https://github.com/giacomelli/SampleProject/fork). 
 
-Did you change it? [Submit a pull request](https://github.com/giacomelli/ProjectSample/pull/new/master).
+Did you change it? [Submit a pull request](https://github.com/giacomelli/SampleProject/pull/new/master).
 
 License
 ======
