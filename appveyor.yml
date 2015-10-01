@@ -23,9 +23,7 @@ after_build:
 - cmd: >-
     "C:\Program Files (x86)\Microsoft Fxcop 10.0\FxCopCmd.exe" /project:.\src\SampleProject.FxCop /out:.\tools\fxcop-report.xml
     
-    .\tools\DotBadge -b "FxCop:fxcop-report.xml" -output "docs\badges\FxCop.svg"
-    
-    tree /F /A
+    .\tools\DotBadge -b "FxCop:fxcop-report.xml" -output "docs\badges\FxCop.svg"      
 
 on_success:
   - git config --global push.default simple
@@ -34,7 +32,7 @@ on_success:
   - git config --global user.email "giacomelli@gmail.com"
   - git config --global user.name "Diego Giacomelli"
   - git commit docs/badges/FxCop.svg -m"Updating FxCop badge"
-  - git push origin:master
+  - git push origin master
 
 test_script:
   - cmd: >-
