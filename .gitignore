@@ -196,3 +196,4 @@ FakesAssemblies/
 *.opt
 tools/coverage/
 tools/fxcop-report.xml
+opencoverCoverage.xml
