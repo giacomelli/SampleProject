@@ -31,7 +31,8 @@ on_success:
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GITHUB_PERSONAL_TOKEN):x-oauth-basic@github.com`n"
   - git config --global user.email "giacomelli@gmail.com"
   - git config --global user.name "Diego Giacomelli"
-  - git add docs/badges/FxCop.svg
+  - git add docs\badges\FxCop.svg
+  - git status
   - git commit -m"Updating FxCop badge"
   - git push origin master
 
