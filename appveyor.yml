@@ -31,11 +31,12 @@ on_success:
   - git config --global push.default simple
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GITHUB_PERSONAL_TOKEN):x-oauth-basic@github.com`n"
+  - git checkout master
   - git status
   - git add docs\badges\FxCop.svg  
   - git commit -m"Updating FxCop badge"
   - git push origin master
-
+  - git status
 test_script:
   - cmd: >-
      .\src\packages\OpenCover.4.6.166\tools\OpenCover.Console.exe -register:user  -output:opencoverCoverage.xml -target:"vstest.console.exe" -targetargs:"/logger:Appveyor \"%cd%\src\SampleProject.Infrastructure.Framework.UnitTests\bin\DEV\SampleProject.Infrastructure.Framework.UnitTests.dll\" \"%cd%\src\SampleProject.Domain.UnitTests\bin\DEV\SampleProject.Domain.UnitTests.dll\"" -targetdir:"src\SampleProject.Domain.UnitTests\bin\DEV" -filter:"+[*]SampleProject.*"
