@@ -1,6 +1,6 @@
 SampleProject
 ===========
-[![Build status](https://ci.appveyor.com/api/projects/status/wb7wfphj9af7050f?svg=true)](https://ci.appveyor.com/project/giacomelli/SampleProject)
+[![Build status](https://ci.appveyor.com/api/projects/status/4n8v7gs72a0n8qyh?svg=true)](https://ci.appveyor.com/project/giacomelli/SampleProject)
 [![Coverage Status](https://coveralls.io/repos/giacomelli/SampleProject/badge.svg?branch=master&service=github)](https://coveralls.io/github/giacomelli/SampleProject?branch=master) 
 [![License](http://img.shields.io/:license-MIT-blue.svg)](https://raw.githubusercontent.com/giacomelli/SampleProject/master/LICENSE)
 
