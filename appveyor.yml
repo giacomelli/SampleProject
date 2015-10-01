@@ -5,7 +5,7 @@ environment:
   COVERALLS_REPO_TOKEN:
     secure: d9CuOgfF+/COpYZhww7xM+674WKgRkl0pHcLjF0XK8aDBAXh3BM6tul5QCbRaf3Y
   
-  GITHUB_PERSONAL_TOKEN
+  GITHUB_PERSONAL_TOKEN:
     secure: F3zg1iMh3xgF5a+fBtJBeeKLfzOJjQhPpkJD1lU6XMLFwsZt5Ed0lPu2wQeYSzsD 
  
 install:
