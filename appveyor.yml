@@ -34,7 +34,7 @@ on_success:
   - git config --global user.email "giacomelli@gmail.com"
   - git config --global user.name "Diego Giacomelli"
   - git commit docs/badges/FxCop.svg -m"Updating FxCop badge"
-  - git push 
+  - git push origin:$env:APPVEYOR_REPO_BRANCH
 
 test_script:
   - cmd: >-
