@@ -4,6 +4,10 @@ configuration: DEV
 environment:
   COVERALLS_REPO_TOKEN:
     secure: d9CuOgfF+/COpYZhww7xM+674WKgRkl0pHcLjF0XK8aDBAXh3BM6tul5QCbRaf3Y
+  
+  GITHUB_PERSONAL_TOKEN
+    secure: F3zg1iMh3xgF5a+fBtJBeeKLfzOJjQhPpkJD1lU6XMLFwsZt5Ed0lPu2wQeYSzsD 
+ 
 install:
 - cmd: 
 nuget:
@@ -19,7 +23,13 @@ after_build:
 - cmd: >-
     "C:\Program Files (x86)\Microsoft Fxcop 10.0\FxCopCmd.exe" /project:.\src\SampleProject.FxCop /out:.\tools\fxcop-report.xml
     
-    .\tools\DotBadge -b "FxCop:fxcop-report.xml" -output "FxCop-badge.svg"
+    .\tools\DotBadge -b "FxCop:fxcop-report.xml" -output "..\docs\badges\FxCop.svg"
+
+on_success:
+  - git config --global credential.helper store
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GITHUB_PERSONAL_TOKEN):x-oauth-basic@github.com`n"
+  - git commit docs/badges/FxCop.svg
+  - git push 
 
 test_script:
   - cmd: >-
