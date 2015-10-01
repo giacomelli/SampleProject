@@ -3,7 +3,7 @@ SampleProject
 [![Build status](https://ci.appveyor.com/api/projects/status/4n8v7gs72a0n8qyh?svg=true)](https://ci.appveyor.com/project/giacomelli/SampleProject)
 [![Tests status](http://teststatusbadge.azurewebsites.net/api/status/giacomelli/SampleProject)](https://ci.appveyor.com/project/giacomelli/SampleProject)
 [![Coverage Status](https://coveralls.io/repos/giacomelli/SampleProject/badge.svg?branch=master&service=github)](https://coveralls.io/github/giacomelli/SampleProject?branch=master) 
-[![FxCop](docs/badges/FxCop.svg)](https://raw.githubusercontent.com/giacomelli/SampleProject/master/LICENSE)
+![](https://cdn.rawgit.com/giacomelli/sampleproject/master/docs/badges/FxCop.svg)
 [![License](http://img.shields.io/:license-MIT-blue.svg)](https://raw.githubusercontent.com/giacomelli/SampleProject/master/LICENSE)
 
 

@@ -28,7 +28,9 @@ after_build:
 on_success:
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GITHUB_PERSONAL_TOKEN):x-oauth-basic@github.com`n"
-  - git commit docs/badges/FxCop.svg
+  - git config --global user.email "giacomelli@gmail.com"
+  - git config --global user.name "Diego Giacomelli"
+  - git commit docs/badges/FxCop.svg -m"Updating FxCop badge"
   - git push 
 
 test_script:
