@@ -5,7 +5,7 @@
   </linearGradient>
   <mask id="a">
     <rect width="138.3259" height="20" rx="3" fill="#fff"/>
-  </mask> 
+  </mask>
   <g mask="url(#a)">
     <path fill="#555" d="M0 0h49.38302v20H0z"/>
 	  <path fill="red" d="M49.38302 0h88.94291v20H49.38302z"/>
@@ -14,7 +14,7 @@
   <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
     <text x="25.69151" y="15" fill="#010101" fill-opacity=".3">FxCop</text>
 	  <text x="25.69151" y="14">FxCop</text>
-	  <text x="92.85448" y="15" fill="#010101" fill-opacity=".3">65 violations</text>
-	  <text x="92.85448" y="14">65 violations</text>
+	  <text x="92.85448" y="15" fill="#010101" fill-opacity=".3">60 violations</text>
+	  <text x="92.85448" y="14">60 violations</text>
   </g>
 </svg>
