@@ -2,7 +2,7 @@
 <FxCopProject Version="10.0" Name="SampleProject">
  <ProjectOptions>
   <SharedProject>True</SharedProject>
-  <Stylesheet Apply="False">$(FxCopDir)\Xml\FxCopReport.xsl</Stylesheet>
+  <Stylesheet Apply="True">$(FxCopDir)\Xml\FxCopReport.xsl</Stylesheet>
   <SaveMessages>
    <Project Status="Active, Excluded" NewOnly="False" />
    <Report Status="Active" NewOnly="False" />

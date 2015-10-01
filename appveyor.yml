@@ -17,7 +17,7 @@ build:
 
 after_build:
 - cmd: >-
-    "C:\Program Files (x86)\Microsoft Fxcop 10.0\FxCopCmd.exe" /project:.\src\SampleProject.FxCop /out:fxcop-report.xml
+    "C:\Program Files (x86)\Microsoft Fxcop 10.0\FxCopCmd.exe" /project:.\src\SampleProject.FxCop /out:fxcop-report.html /oXsl:.\tools\FxCopRichConsoleOutput.xsl /applyoutXsl
 
 test_script:
   - cmd: >-
@@ -26,6 +26,6 @@ test_script:
   - ps: .\src\packages\coveralls.net.0.6.0\tools\csmacnz.Coveralls.exe --opencover -i opencoverCoverage.xml --repoToken $env:COVERALLS_REPO_TOKEN --commitId $env:APPVEYOR_REPO_COMMIT --commitBranch $env:APPVEYOR_REPO_BRANCH --commitAuthor $env:APPVEYOR_REPO_COMMIT_AUTHOR --commitEmail $env:APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL --commitMessage $env:APPVEYOR_REPO_COMMIT_MESSAGE --jobId $env:APPVEYOR_JOB_ID
 
 artifacts:
-  - path: fxcop-report.xml
+  - path: fxcop-report.html
     name: FxCop  
   
