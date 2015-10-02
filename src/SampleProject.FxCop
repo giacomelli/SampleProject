@@ -37,7 +37,6 @@
     <Rule Name="AbstractTypesShouldNotHaveConstructors" Enabled="True" />
     <Rule Name="AvoidEmptyInterfaces" Enabled="True" />
     <Rule Name="AvoidExcessiveParametersOnGenericTypes" Enabled="True" />
-    <Rule Name="AvoidNamespacesWithFewTypes" Enabled="True" />
     <Rule Name="AvoidOutParameters" Enabled="True" />
     <Rule Name="CollectionsShouldImplementGenericInterface" Enabled="True" />
     <Rule Name="ConsiderPassingBaseTypesAsParameters" Enabled="True" />
