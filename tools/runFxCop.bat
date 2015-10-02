@@ -5,7 +5,7 @@ rem @"C:\Program Files (x86)\Microsoft Fxcop 10.0\FxCopCmd.exe" /project:"..\SRC
 @"C:\Program Files (x86)\Microsoft Fxcop 10.0\FxCopCmd.exe" /project:"..\SRC\SampleProject.FxCop" /out:fxcop-report.xml
 @echo fxcop-report.html file created.
 
-DotBadge -b "FxCop:fxcop-report.xml" -output "..\docs\badges\FxCop.svg"
+BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" "fxcop-report.xml"
 
 @echo Done!
 @pause

@@ -109,44 +109,6 @@
   <Settings />
  </Rules>
  <FxCopReport Version="10.0">
-  <Namespaces>
-   <Namespace Name="SampleProject.Domain.Accounts.Specs">
-    <Messages>
-     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2015-09-30 17:27:43Z">
-      <Issue>
-       <Item>SampleProject.Domain.Accounts.Specs</Item>
-      </Issue>
-     </Message>
-    </Messages>
-   </Namespace>
-   <Namespace Name="SampleProject.Infrastructure.Framework.Commons">
-    <Messages>
-     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2015-09-30 17:27:43Z">
-      <Issue>
-       <Item>SampleProject.Infrastructure.Framework.Commons</Item>
-      </Issue>
-     </Message>
-    </Messages>
-   </Namespace>
-   <Namespace Name="SampleProject.Infrastructure.Framework.Commons.Specs">
-    <Messages>
-     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2015-09-30 17:27:43Z">
-      <Issue>
-       <Item>SampleProject.Infrastructure.Framework.Commons.Specs</Item>
-      </Issue>
-     </Message>
-    </Messages>
-   </Namespace>
-   <Namespace Name="SampleProject.Infrastructure.Framework.Linq">
-    <Messages>
-     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2015-09-30 17:27:43Z">
-      <Issue>
-       <Item>SampleProject.Infrastructure.Framework.Linq</Item>
-      </Issue>
-     </Message>
-    </Messages>
-   </Namespace>
-  </Namespaces>
   <Targets>
    <Target Name="$(ProjectDir)/SampleProject.BackgroundWorkerApp/bin/DEV/SampleProject.BackgroundWorkerApp.exe">
     <Modules>
@@ -786,9 +748,6 @@
   <Rules>
    <Rule TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040">
     <Resolution Name="Default">Define a custom attribute to replace {0}.</Resolution>
-   </Rule>
-   <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
-    <Resolution Name="Default">Consider merging the types defined in '{0}' with another namespace.</Resolution>
    </Rule>
    <Rule TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227">
     <Resolution Name="Default">Change {0} to be read-only by removing the property setter.</Resolution>

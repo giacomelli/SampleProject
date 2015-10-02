@@ -4,10 +4,7 @@ configuration: DEV
 environment:
   COVERALLS_REPO_TOKEN:
     secure: d9CuOgfF+/COpYZhww7xM+674WKgRkl0pHcLjF0XK8aDBAXh3BM6tul5QCbRaf3Y
-  
-  GITHUB_PERSONAL_TOKEN:
-    secure: F3zg1iMh3xgF5a+fBtJBeeKLfzOJjQhPpkJD1lU6XMLFwsZt5Ed0lPu2wQeYSzsD 
- 
+   
 install:
 - cmd: 
 nuget:
@@ -15,12 +12,6 @@ nuget:
   project_feed: false
 before_build:
 - cmd: nuget restore .\src\SampleProject.sln
-- git config --global user.email "giacomelli@gmail.com"
-- git config --global user.name "Diego Giacomelli" 
-- git config --global push.default simple
-- git config --global credential.helper store
-- ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GITHUB_PERSONAL_TOKEN):x-oauth-basic@github.com`n"
-- git checkout master
 
 build:
   project: src\SampleProject.sln
@@ -30,7 +21,7 @@ after_build:
 - cmd: >-
     "C:\Program Files (x86)\Microsoft Fxcop 10.0\FxCopCmd.exe" /project:.\src\SampleProject.FxCop /out:.\tools\fxcop-report.xml
     
-    .\tools\DotBadge -b "FxCop:fxcop-report.xml" -output "docs\badges\FxCop.svg"      
+    .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" "fxcop-report.xml"
 
 on_success:
   - git status
