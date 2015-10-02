@@ -21,7 +21,7 @@ after_build:
 - cmd: >-
     "C:\Program Files (x86)\Microsoft Fxcop 10.0\FxCopCmd.exe" /project:.\src\SampleProject.FxCop /out:.\tools\fxcop-report.xml
     
-    .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" ".\tools\fxcop-report.xml"
+    .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" FxCop ".\tools\fxcop-report.xml"
     
     .\tools\StyleCopCmd\Net.SF.StyleCopCmd.Console\StyleCopCmd.exe -sf .\src\SampleProject.sln -of .\tools\stylecop-report.xml
     
