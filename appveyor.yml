@@ -22,13 +22,11 @@ after_build:
     "C:\Program Files (x86)\Microsoft Fxcop 10.0\FxCopCmd.exe" /project:.\src\SampleProject.FxCop /out:.\tools\fxcop-report.xml
     
     .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" ".\tools\fxcop-report.xml"
+    
+    .\tools\StyleCopCmd\Net.SF.StyleCopCmd.Console\StyleCopCmd.exe -sf .\src\SampleProject.sln -of .\tools\stylecop-report.xml
+    
+    .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" StyleCop .\tools\"stylecop-report.violations.xml"
 
-on_success:
-  - git status
-  - git add docs\badges\FxCop.svg  
-  - git commit -m"Updating FxCop badge"
-  - git push origin master
-  - git status
 test_script:
   - cmd: >-
      .\src\packages\OpenCover.4.6.166\tools\OpenCover.Console.exe -register:user  -output:opencoverCoverage.xml -target:"vstest.console.exe" -targetargs:"/logger:Appveyor \"%cd%\src\SampleProject.Infrastructure.Framework.UnitTests\bin\DEV\SampleProject.Infrastructure.Framework.UnitTests.dll\" \"%cd%\src\SampleProject.Domain.UnitTests\bin\DEV\SampleProject.Domain.UnitTests.dll\"" -targetdir:"src\SampleProject.Domain.UnitTests\bin\DEV" -filter:"+[*]SampleProject.*"
