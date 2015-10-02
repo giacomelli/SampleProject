@@ -25,7 +25,7 @@ after_build:
     
     .\tools\StyleCopCmd\Net.SF.StyleCopCmd.Console\StyleCopCmd.exe -sf .\src\SampleProject.sln -of .\tools\stylecop-report.xml
     
-    .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" StyleCop .\tools\"stylecop-report.violations.xml"
+    .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" StyleCop ".\tools\stylecop-report.violations.xml"
 
 test_script:
   - cmd: >-
