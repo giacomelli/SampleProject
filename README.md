@@ -5,6 +5,7 @@ SampleProject
 [![Coverage Status](https://coveralls.io/repos/giacomelli/SampleProject/badge.svg?branch=master&service=github)](https://coveralls.io/github/giacomelli/SampleProject?branch=master) 
 ![FxCop](http://badgessharp.apphb.com/api/badge?repositoryUrl=https://github.com/giacomelli/SampleProject&badge=FxCop)
 ![StyleCop](http://badgessharp.apphb.com/api/badge?repositoryUrl=https://github.com/giacomelli/SampleProject&badge=StyleCop)
+![SpecFlow](http://badgessharp.apphb.com/api/badge?repositoryUrl=https://github.com/giacomelli/SampleProject&badge=SpecFlow)
 [![License](http://img.shields.io/:license-MIT-blue.svg)](https://raw.githubusercontent.com/giacomelli/SampleProject/master/LICENSE)
 
 
