@@ -6,9 +6,8 @@ environment:
     secure: d9CuOgfF+/COpYZhww7xM+674WKgRkl0pHcLjF0XK8aDBAXh3BM6tul5QCbRaf3Y
    
 install:
-  choco install resharper-clt.portable
+- cmd: choco install resharper-clt.portable
   
-- cmd: 
 nuget:
   account_feed: false
   project_feed: false
