@@ -18,7 +18,7 @@ build:
   verbosity: minimal
 
 after_build:
-- cmd: >-
+- cmd: >-    
     "C:\Program Files (x86)\Microsoft Fxcop 10.0\FxCopCmd.exe" /project:.\src\SampleProject.FxCop /out:.\tools\fxcop-report.xml
     
     .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" FxCop ".\tools\fxcop-report.xml"
@@ -27,7 +27,7 @@ after_build:
     
     .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" StyleCop ".\tools\stylecop-report.violations.xml"
     
-    C:\ProgramData\chocolatey\lib\resharper-clt.portable\tools\dupfinder.exe /output=.\tools\dupFinderReport.xml /show-text ..\src\SampleProject.sln
+    C:\ProgramData\chocolatey\lib\resharper-clt.portable\tools\dupfinder.exe /output=.\tools\dupFinderReport.xml /show-text .\src\SampleProject.sln
     
     .\tools\BadgesSharp\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" DupFinder .\tools\dupFinderReport.xml
 
