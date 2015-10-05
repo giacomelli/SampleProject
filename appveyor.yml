@@ -35,14 +35,5 @@ test_script:
   
   - cmd: >-
        vstest.console.exe /logger:Appveyor "%cd%\src\SampleProject.Specs\bin\DEV\SampleProject.Specs.dll"       
-       if errorlevel 1 goto ONE
-          if errorlevel 0 goto ZERO
-          goto END
-          :ZERO
-            .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" SpecFlow success
-            goto END
-          :ONE
-            .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" SpecFlow failed
-          :END
-  
+       .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" SpecFlow %ERRORLEVEL%  
   
