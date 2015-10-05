@@ -26,6 +26,10 @@ after_build:
     .\tools\StyleCopCmd\Net.SF.StyleCopCmd.Console\StyleCopCmd.exe -sf .\src\SampleProject.sln -of .\tools\stylecop-report.xml
     
     .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" StyleCop ".\tools\stylecop-report.violations.xml"
+    
+    C:\ProgramData\chocolatey\lib\resharper-clt.portable\tools\dupfinder.exe /output=.\tools\dupFinderReport.xml /show-text ..\src\SampleProject.sln
+    
+    .\tools\BadgesSharp\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" DupFinder .\tools\dupFinderReport.xml
 
 test_script:
   - cmd: >-
@@ -39,3 +43,6 @@ after_test:
        
        .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" SpecFlow %ERRORLEVEL%  
   
+artifacts:
+  - path: .\tools\dupFinderReport.xml
+    name: DupFinderReport  
