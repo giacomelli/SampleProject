@@ -35,6 +35,7 @@ test_script:
 
 after_test:  
   - cmd: >-
-       vstest.console.exe /logger:Appveyor "%cd%\src\SampleProject.Specs\bin\DEV\SampleProject.Specs.dll"       
+       vstest.console.exe /logger:Appveyor "%cd%\src\SampleProject.Specs\bin\DEV\SampleProject.Specs.dll"     
+       
        .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" SpecFlow %ERRORLEVEL%  
   
