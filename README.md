@@ -9,8 +9,8 @@ SampleProject
 
 
 ####Code quality
-![FxCop](http://badgessharp.apphb.com/api/badge?repositoryUrl=https://github.com/giacomelli/SampleProject&badge=FxCop)
-![StyleCop](http://badgessharp.apphb.com/api/badge?repositoryUrl=https://github.com/giacomelli/SampleProject&badge=StyleCop)
+[![FxCop](http://badgessharp.apphb.com/api/badge?repositoryUrl=https://github.com/giacomelli/SampleProject&badge=FxCop)](https://ci.appveyor.com/project/giacomelli/SampleProject/build/artifacts)
+[![StyleCop](http://badgessharp.apphb.com/api/badge?repositoryUrl=https://github.com/giacomelli/SampleProject&badge=StyleCop)](https://ci.appveyor.com/project/giacomelli/SampleProject/build/artifacts)
 [![DupFinder](http://badgessharp.apphb.com/api/badge?repositoryUrl=https://github.com/giacomelli/SampleProject&badge=DupFinder)](https://ci.appveyor.com/project/giacomelli/SampleProject/build/artifacts)
 
 ####License
