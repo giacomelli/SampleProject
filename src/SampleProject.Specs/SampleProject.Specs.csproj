@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -98,6 +98,13 @@
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="TestSharp, Version=0.0.6.0, Culture=neutral, PublicKeyToken=76c905e92dbc6707, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\references\TestSharp\TestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="WebDriver, Version=2.47.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Selenium.WebDriver.2.47.0\lib\net40\WebDriver.dll</HintPath>
       <Private>True</Private>
@@ -120,16 +127,33 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Features\Sample1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sample1.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Integrations\Environments\SampleContinuousIntegrationEnvironment.cs" />
+    <Compile Include="Integrations\Environments\SampleDevelopmentEnvironment.cs" />
+    <Compile Include="Integrations\SpecFlowHeperConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Features\Sample1.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Sample1.feature.cs</LastGenOutput>
+    </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Features\" />
+    <Folder Include="Steps\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Drivers\chromedriver.exe" />
+    <Content Include="Drivers\IEDriverServer.exe" />
+    <Content Include="Drivers\phantomjs.exe" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
