@@ -34,6 +34,15 @@ test_script:
   - ps: .\src\packages\coveralls.net.0.6.0\tools\csmacnz.Coveralls.exe --opencover -i opencoverCoverage.xml --repoToken $env:COVERALLS_REPO_TOKEN --commitId $env:APPVEYOR_REPO_COMMIT --commitBranch $env:APPVEYOR_REPO_BRANCH --commitAuthor $env:APPVEYOR_REPO_COMMIT_AUTHOR --commitEmail $env:APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL --commitMessage $env:APPVEYOR_REPO_COMMIT_MESSAGE --jobId $env:APPVEYOR_JOB_ID
   
   - cmd: >-
-       vstest.console.exe /logger:Appveyor "%cd%\src\SampleProject.Specs\bin\DEV\SampleProject.Specs.dll"
+       vstest.console.exe /logger:Appveyor "%cd%\src\SampleProject.Specs\bin\DEV\SampleProject.Specs.dll"       
+       if errorlevel 1 goto ONE
+          if errorlevel 0 goto ZERO
+          goto END
+          :ZERO
+            .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" SpecFlow success
+            goto END
+          :ONE
+            .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" SpecFlow failed
+          :END
   
   

@@ -104,25 +104,25 @@ this.FeatureBackground();
 #line 21
  testRunner.When("clico no botão \'Register new\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
 #line 22
- testRunner.Then("deve exibir o texto \'O campo Email é obrigatório\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
+ testRunner.Then("deve exibir o texto \'The Email field is required\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
 #line 23
- testRunner.And("deve exibir o texto \'O campo Password é obrigatório\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("deve exibir o texto \'The Password field is required\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line 25
  testRunner.When("digito \'test@sampleproject.com\' no campo \'Email\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
 #line 26
  testRunner.When("clico no botão \'Register new\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
 #line 27
- testRunner.Then("não deve exibir o texto \'O campo Email é obrigatório\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
+ testRunner.Then("não deve exibir o texto \'The Email field is required\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
 #line 28
- testRunner.And("deve exibir o texto \'O campo Password é obrigatório\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("deve exibir o texto \'The Password field is required\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line 30
  testRunner.When("digito \'abc\' no campo \'Password\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
 #line 31
  testRunner.When("clico no botão \'Register new\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
 #line 32
- testRunner.Then("não deve exibir o texto \'O campo Email é obrigatório\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
+ testRunner.Then("não deve exibir o texto \'The Email field is required\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
 #line 33
- testRunner.And("não deve exibir o texto \'O campo Password é obrigatório\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("não deve exibir o texto \'The Password field is required\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line 34
  testRunner.And("deve exibir o texto \'The Password must be at least 6 characters long\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line 35
