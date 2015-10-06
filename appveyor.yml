@@ -49,7 +49,7 @@ after_test:
        .\tools\BadgesSharp\BadgesSharpCmd.exe giacomelli SampleProject SpecFlow %ERRORLEVEL% %GITHUB_REPO_TOKEN% 
 
 before_deploy:
-  - msbuild.exe src\SampleProject.sln /p:DeployOnBuild=true /p:PublishProfile=PRD.pubxml /p:WebPublishMethod=FileSystem /p:publishUrl=SampleProject-release
+  - msbuild.exe src\SampleProject.sln /p:DeployOnBuild=true /p:PublishProfile=PRD.pubxml
   - 7z a -tzip build\SampleProject-release.zip build\SampleProject-release
   - ps: Push-AppveyorArtifact "build\SampleProject-release.zip"
 
