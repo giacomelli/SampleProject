@@ -50,8 +50,8 @@ after_test:
 
 before_deploy:
   - msbuild.exe src\SampleProject.sln /p:DeployOnBuild=true /p:PublishProfile=PRD.pubxml /p:WebPublishMethod=FileSystem /p:publishUrl=SampleProject-release
-  - 7z a -tzip SampleProject-release.zip SampleProject-release
-  - ps: Push-AppveyorArtifact "SampleProject-release.zip"
+  - 7z a -tzip build\SampleProject-release.zip build\SampleProject-release
+  - ps: Push-AppveyorArtifact "build\SampleProject-release.zip"
 
 deploy:
   - provider: GitHub
