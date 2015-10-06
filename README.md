@@ -5,13 +5,13 @@ SampleProject
 ####Tests
 [![Tests status](http://teststatusbadge.azurewebsites.net/api/status/giacomelli/SampleProject)](https://ci.appveyor.com/project/giacomelli/SampleProject)
 [![Coverage Status](https://coveralls.io/repos/giacomelli/SampleProject/badge.svg?branch=master&service=github)](https://coveralls.io/github/giacomelli/SampleProject?branch=master)
-![SpecFlow](http://badgessharp.apphb.com/api/badge?repositoryUrl=https://github.com/giacomelli/SampleProject&badge=SpecFlow)
+![SpecFlow](http://badgessharp.apphb.com/badges/giacomelli/SampleProject/SpecFlow)
 
 
 ####Code quality
-[![FxCop](http://badgessharp.apphb.com/api/badge?repositoryUrl=https://github.com/giacomelli/SampleProject&badge=FxCop)](https://ci.appveyor.com/project/giacomelli/SampleProject/build/artifacts)
-[![StyleCop](http://badgessharp.apphb.com/api/badge?repositoryUrl=https://github.com/giacomelli/SampleProject&badge=StyleCop)](https://ci.appveyor.com/project/giacomelli/SampleProject/build/artifacts)
-[![DupFinder](http://badgessharp.apphb.com/api/badge?repositoryUrl=https://github.com/giacomelli/SampleProject&badge=DupFinder)](https://ci.appveyor.com/project/giacomelli/SampleProject/build/artifacts)
+[![FxCop](http://badgessharp.apphb.com/badges/giacomelli/SampleProject/FxCop)](https://ci.appveyor.com/project/giacomelli/SampleProject/build/artifacts)
+[![StyleCop](http://badgessharp.apphb.com/badges/giacomelli/SampleProject/StyleCop)](https://ci.appveyor.com/project/giacomelli/SampleProject/build/artifacts)
+[![DupFinder](http://badgessharp.apphb.com/badges/giacomelli/SampleProject/DupFinder)](https://ci.appveyor.com/project/giacomelli/SampleProject/build/artifacts)
 
 ####License
 [![License](http://img.shields.io/:license-MIT-blue.svg)](https://raw.githubusercontent.com/giacomelli/SampleProject/master/LICENSE)

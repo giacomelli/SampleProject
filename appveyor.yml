@@ -4,7 +4,10 @@ configuration: DEV
 environment:
   COVERALLS_REPO_TOKEN:
     secure: d9CuOgfF+/COpYZhww7xM+674WKgRkl0pHcLjF0XK8aDBAXh3BM6tul5QCbRaf3Y
-   
+
+  GITHUB_REPO_TOKEN:
+    secure: Jmpeow5aAcDhUHkwac/AC6MzQciGc9TLgrp5oz4U0gyAwCWGqqxJhmjz3AVrWp/V  
+
 install:
 - cmd: choco install resharper-clt.portable
   
@@ -23,15 +26,15 @@ after_build:
 - cmd: >-    
     "C:\Program Files (x86)\Microsoft Fxcop 10.0\FxCopCmd.exe" /project:.\src\SampleProject.FxCop /out:.\tools\fxcop-report.xml
     
-    .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" FxCop ".\tools\fxcop-report.xml"
+    .\tools\BadgesSharp\BadgesSharpCmd.exe giacomelli SampleProject FxCop ".\tools\fxcop-report.xml" %GITHUB_REPO_TOKEN%
     
-    .\tools\StyleCopCmd\Net.SF.StyleCopCmd.Console\StyleCopCmd.exe -sf .\src\SampleProject.sln -of .\tools\stylecop-report.xml
+    .\tools\StyleCopCmd\Net.SF.StyleCopCmd.Console\StyleCopCmd.exe -sf .\src\SampleProject.sln -of .\tools\stylecop-report.xml 
     
-    .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" StyleCop ".\tools\stylecop-report.violations.xml"
+    .\tools\BadgesSharp\BadgesSharpCmd.exe giacomelli SampleProject StyleCop ".\tools\stylecop-report.violations.xml" %GITHUB_REPO_TOKEN%
     
     C:\ProgramData\chocolatey\lib\resharper-clt.portable\tools\dupfinder.exe /output=.\tools\dupFinder-Report.xml /show-text /exclude=**\*Test.cs;**\*.feature.cs;**\BundleConfig.cs .\src\SampleProject.sln
     
-    .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" DupFinder .\tools\dupFinder-Report.xml
+    .\tools\BadgesSharp\BadgesSharpCmd.exe giacomelli SampleProject DupFinder .\tools\dupFinder-Report.xml %GITHUB_REPO_TOKEN%
 
 test_script:
   - cmd: >-
@@ -43,7 +46,23 @@ after_test:
   - cmd: >-
        vstest.console.exe /logger:Appveyor "%cd%\src\SampleProject.Specs\bin\DEV\SampleProject.Specs.dll"     
        
-       .\tools\BadgesSharp\BadgesSharpCmd.exe "https://github.com/giacomelli/SampleProject" SpecFlow %ERRORLEVEL%  
+       .\tools\BadgesSharp\BadgesSharpCmd.exe giacomelli SampleProject SpecFlow %ERRORLEVEL% %GITHUB_REPO_TOKEN% 
+
+before_deploy:
+  - msbuild.exe src\SampleProject.sln /p:DeployOnBuild=true /p:PublishProfile=PRD.pubxml /p:WebPublishMethod=FileSystem /p:publishUrl=SampleProject-release
+  - 7z a -tzip SampleProject-release.zip SampleProject-release
+  - ps: Push-AppveyorArtifact "SampleProject-release.zip"
+
+deploy:
+  - provider: GitHub
+    auth_token:
+      secure: tPi7Y0tY8n4VFehuXK57BIGCzVI7GgrSFxJ0qJyJRSwwyl3KjbnODiLrqOqI1QCf
+    artifact: SampleProject-release.zip
+    draft: false
+    prerelease: false
+    on:
+      branch: master                 # release from master branch only
+      appveyor_repo_tag: false       # deploy on tag push only  
   
 artifacts: 
   - path: .\tools\fxcop-report.xml
