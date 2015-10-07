@@ -201,3 +201,5 @@ tools/fxcop-report.html
 tools/FxCop-badge.svg
 FxCop-badge.svg
 tools/dupFinderReport.xml
+tools/stylecop-report.violations.xml
+tools/stylecop-report.xml

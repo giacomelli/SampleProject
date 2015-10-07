@@ -35,7 +35,6 @@
   <RuleFiles>
    <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="False">
     <Rule Name="AbstractTypesShouldNotHaveConstructors" Enabled="True" />
-    <Rule Name="AvoidEmptyInterfaces" Enabled="True" />
     <Rule Name="AvoidExcessiveParametersOnGenericTypes" Enabled="True" />
     <Rule Name="AvoidOutParameters" Enabled="True" />
     <Rule Name="CollectionsShouldImplementGenericInterface" Enabled="True" />
@@ -148,15 +147,6 @@
       <Namespaces>
        <Namespace Name="SampleProject.Domain.Accounts">
         <Types>
-         <Type Name="IPermissionService">
-          <Messages>
-           <Message TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040" Created="2015-10-01 11:18:32Z">
-            <Issue>
-             <Item>'IPermissionService'</Item>
-            </Issue>
-           </Message>
-          </Messages>
-         </Type>
          <Type Name="IUserPasswordService">
           <Members>
            <Member Name="#GetPasswordResetTokensNotSent()">
@@ -745,9 +735,6 @@
    </Target>
   </Targets>
   <Rules>
-   <Rule TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040">
-    <Resolution Name="Default">Define a custom attribute to replace {0}.</Resolution>
-   </Rule>
    <Rule TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227">
     <Resolution Name="Default">Change {0} to be read-only by removing the property setter.</Resolution>
    </Rule>
