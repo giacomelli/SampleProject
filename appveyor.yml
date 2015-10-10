@@ -1,3 +1,4 @@
+skip_tags: true
 version: 0.0.{build}
 os: Visual Studio 2015
 configuration: DEV
