@@ -54,14 +54,14 @@ before_deploy:
   - 7z a -tzip build\SampleProject-release.zip build\SampleProject-release
   - ps: Push-AppveyorArtifact "build\SampleProject-release.zip"
 
-deploy:
-  - provider: GitHub
-    tag: v$(GitVersion_SemVer)
-    release: v$(GitVersion_SemVer)
-    auth_token:
-      secure: tPi7Y0tY8n4VFehuXK57BIGCzVI7GgrSFxJ0qJyJRSwwyl3KjbnODiLrqOqI1QCf
-    draft: false
-    prerelease: $(GIT_PRE_RELEASE)
+#deploy:
+#  - provider: GitHub
+#    tag: v$(GitVersion_SemVer)
+#    release: v$(GitVersion_SemVer)
+#    auth_token:
+#      secure: tPi7Y0tY8n4VFehuXK57BIGCzVI7GgrSFxJ0qJyJRSwwyl3KjbnODiLrqOqI1QCf
+#    draft: false
+#    prerelease: $(GIT_PRE_RELEASE)
      
 artifacts: 
   - path: .\tools\fxcop-report.xml
